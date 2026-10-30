@@ -8,5 +8,5 @@ Publish the repository root as-is on Vercel, Netlify, or Cloudflare Pages. There
 
 Edit only `assets/cta.js`:
 
-- `BOOK_SCREEN_SHARE` — 预约屏幕共享
-- `TELEGRAM_WECHAT` — Telegram / 微信咨询
+- `BOOK_DIAGNOSIS` — 预约 15 分钟免费诊断
+- `FREE_TEMPLATE` — 免费领取收 U 模板

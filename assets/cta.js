@@ -1,14 +1,14 @@
 /**
  * UBook call-to-action links. This is the only place these URLs are set.
- * BOOK_SCREEN_SHARE — 预约屏幕共享
- * TELEGRAM_WECHAT — Telegram / 微信咨询
+ * BOOK_DIAGNOSIS — 预约 15 分钟免费诊断
+ * FREE_TEMPLATE — 免费领取收 U 模板
  */
 (function () {
   "use strict";
 
   var UBOOK_CTA = {
-    BOOK_SCREEN_SHARE: "https://example.com/ubook/book-screen-share",
-    TELEGRAM_WECHAT: "https://example.com/ubook/telegram-wechat"
+    BOOK_DIAGNOSIS: "https://calendly.com/leofrank1017/ubook-15",
+    FREE_TEMPLATE: "https://tally.so/r/1WWQzO"
   };
 
   window.UBOOK_CTA = UBOOK_CTA;
@@ -17,9 +17,10 @@
     var links = document.querySelectorAll("[data-cta]");
     for (var i = 0; i < links.length; i++) {
       var key = links[i].getAttribute("data-cta");
-      if (Object.prototype.hasOwnProperty.call(UBOOK_CTA, key)) {
-        links[i].setAttribute("href", UBOOK_CTA[key]);
-      }
+      if (!Object.prototype.hasOwnProperty.call(UBOOK_CTA, key)) continue;
+      links[i].setAttribute("href", UBOOK_CTA[key]);
+      links[i].setAttribute("target", "_blank");
+      links[i].setAttribute("rel", "noopener");
     }
   }
 

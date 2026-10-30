@@ -149,8 +149,11 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
   min-height: 64px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .logo {
@@ -168,6 +171,10 @@ ol {
   font-size: 13px;
   color: var(--muted);
   margin-left: 8px;
+}
+
+.site-header nav {
+  flex-shrink: 0;
 }
 
 .nav-list {
@@ -206,6 +213,7 @@ ol {
 .btn-compact {
   padding: 8px 14px;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .btn-primary:hover {
@@ -484,7 +492,7 @@ main:focus-visible {
   box-shadow: none;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 720px) {
   .logo small {
     display: block;
     margin-left: 0;

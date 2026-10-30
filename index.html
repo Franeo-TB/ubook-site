@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#F7F3EA">
   <meta name="color-scheme" content="light">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <!-- CTA 链接只在 assets/cta.js 修改：BOOK_SCREEN_SHARE（预约屏幕共享）、TELEGRAM_WECHAT（Telegram / 微信咨询）。 -->
+  <!-- CTA 链接只在 assets/cta.js 修改：BOOK_DIAGNOSIS（预约 15 分钟免费诊断）、FREE_TEMPLATE（免费领取收 U 模板）。 -->
   <meta property="og:title" content="UBook｜U 收款搭建与对账">
   <meta property="og:description" content="给海外华人自由职业者和小团队。我们陪你把 USDT/USDC 收款和对账搭好。钱始终在你自己的钱包里。香港、台湾、新加坡、马来西亚。">
   <meta property="og:type" content="website">
@@ -37,9 +37,9 @@
   <header class="site-header">
     <div class="wrap header-bar">
       <p class="logo">UBook<small>U 收款搭建与对账</small></p>
-      <nav aria-label="页内导航">
+      <nav aria-label="预约">
         <ul class="nav-list">
-          <li><a class="btn btn-secondary btn-compact" href="#book">预约<span class="vh">屏幕共享</span></a></li>
+          <li><a class="btn btn-secondary btn-compact" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a></li>
         </ul>
       </nav>
     </div>
@@ -52,8 +52,8 @@
           <h1 id="hero-title">放心收 U，<br>月底的账也一清二楚</h1>
           <p class="lead">给海外华人自由职业者和小团队。我们陪你把 USDT/USDC 收款和对账搭好。钱始终在你自己的钱包里。</p>
           <div class="cta" id="book" tabindex="-1">
-            <a class="btn btn-primary" data-cta="BOOK_SCREEN_SHARE" href="#book">预约屏幕共享</a>
-            <a class="btn btn-secondary" data-cta="TELEGRAM_WECHAT" href="#consult">Telegram / 微信咨询</a>
+            <a class="btn btn-primary" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
+            <a class="btn btn-secondary" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
           </div>
         </div>
         <figure class="ledger">
@@ -172,6 +172,10 @@
             </ul>
           </article>
         </div>
+        <div class="cta">
+          <a class="btn btn-primary" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
+          <a class="btn btn-secondary" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
+        </div>
       </div>
     </section>
 
@@ -207,9 +211,9 @@
   <footer class="site-footer" aria-labelledby="footer-title">
     <div class="wrap">
       <h2 id="footer-title">先聊 15 分钟，看适不适合你</h2>
-      <div class="cta" id="consult" tabindex="-1">
-        <a class="btn btn-primary" data-cta="BOOK_SCREEN_SHARE" href="#book">预约屏幕共享</a>
-        <a class="btn btn-secondary" data-cta="TELEGRAM_WECHAT" href="#consult">Telegram / 微信咨询</a>
+      <div class="cta">
+        <a class="btn btn-primary" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
+        <a class="btn btn-secondary" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
       </div>
       <p class="fine">UBook 不托管资金、不换汇、不接触私钥、不提供税务建议。</p>
     </div>

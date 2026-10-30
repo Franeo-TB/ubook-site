@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UBook｜U 收款搭建与对账</title>
   <meta name="description" content="给海外华人自由职业者和小团队。我们陪你把 USDT/USDC 收款和对账搭好。钱始终在你自己的钱包里。香港、台湾、新加坡、马来西亚。">
-  <meta name="theme-color" content="#F7F3EA">
+  <meta name="theme-color" content="#FAFAF8">
   <meta name="color-scheme" content="light">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <!-- CTA 链接只在 assets/cta.js 修改：BOOK_DIAGNOSIS（预约 15 分钟免费诊断）、FREE_TEMPLATE（免费领取收 U 模板）。 -->
@@ -27,83 +27,121 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="preload" href="assets/fonts/noto-serif-sc-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/noto-sans-sc-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/noto-sans-sc-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/cta.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">跳到主要内容</a>
-  <header class="site-header">
-    <div class="wrap header-bar">
-      <p class="logo">UBook<small>U 收款搭建与对账</small></p>
-      <nav aria-label="预约">
-        <ul class="nav-list">
-          <li><a class="btn btn-secondary btn-compact" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a></li>
-        </ul>
+  <header>
+    <div class="w">
+      <a class="brand" href="#main">UBook</a>
+      <nav class="nav" aria-label="页内">
+        <a href="#how">流程</a>
+        <a href="#price">价格</a>
+        <a href="#faq">常见问题</a>
       </nav>
+      <a class="btn p sm" data-cta="BOOK_DIAGNOSIS" href="#book">预约诊断</a>
     </div>
   </header>
   <main id="main" tabindex="-1">
-    <section aria-labelledby="hero-title">
-      <div class="wrap hero">
-        <div>
-          <p class="eyebrow">香港 · 台湾 · 新加坡 · 马来西亚</p>
-          <h1 id="hero-title">放心收 U，<br>月底的账也一清二楚</h1>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="w g12">
+        <div class="copy">
+          <p class="loc"><i aria-hidden="true"></i>香港 · 台湾 · 新加坡 · 马来西亚</p>
+          <h1 id="hero-title">放心收 U，<br>月底的账<br class="mb">也一清二楚</h1>
           <p class="lead">给海外华人自由职业者和小团队。我们陪你把 USDT/USDC 收款和对账搭好。钱始终在你自己的钱包里。</p>
-          <div class="cta" id="book" tabindex="-1">
-            <a class="btn btn-primary" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
-            <a class="btn btn-secondary" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
+          <div class="cta" id="book">
+            <a class="btn p" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a class="btn s" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
           </div>
         </div>
-        <figure class="ledger">
-          <figcaption>发票 INV-0012 · 示例</figcaption>
-          <table>
-            <tbody>
-              <tr>
-                <th scope="row">项目</th>
-                <td>网站设计（10 月）</td>
-              </tr>
-              <tr>
-                <th scope="row">金额</th>
-                <td>1,200 USDT</td>
-              </tr>
-              <tr>
-                <th scope="row">网络</th>
-                <td class="tag">仅限 TRC20</td>
-              </tr>
-              <tr>
-                <th scope="row">收款地址</th>
-                <td>T9yD…k3Qp</td>
-              </tr>
-              <tr>
-                <th scope="row">到账核对</th>
-                <td>已对上 <span aria-hidden="true">✓</span></td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="ledger-note">发票上写明网络，客户就不容易转错。</p>
-        </figure>
+        <div class="vis" role="group" aria-label="发票与对账表示例">
+          <div class="card inv">
+            <div class="ih"><b>发票 INV-0012</b><span class="pill">TRC20 · 仅此网络</span></div>
+            <p class="amt">1,200<small>USDT</small></p>
+            <p class="for">网站设计（10 月）· 示例</p>
+            <div class="pay">
+              <svg class="qr" viewBox="0 0 21 21" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="7" width="1" height="1"/><rect x="0" y="10" width="1" height="1"/><rect x="0" y="12" width="1" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="1" y="11" width="1" height="1"/><rect x="1" y="12" width="1" height="1"/><rect x="3" y="9" width="1" height="1"/><rect x="3" y="10" width="1" height="1"/><rect x="4" y="9" width="1" height="1"/><rect x="4" y="11" width="1" height="1"/><rect x="5" y="7" width="1" height="1"/><rect x="5" y="10" width="1" height="1"/><rect x="5" y="12" width="1" height="1"/><rect x="6" y="7" width="1" height="1"/><rect x="6" y="11" width="1" height="1"/><rect x="6" y="12" width="1" height="1"/><rect x="8" y="0" width="1" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="8" y="9" width="1" height="1"/><rect x="8" y="10" width="1" height="1"/><rect x="8" y="14" width="1" height="1"/><rect x="8" y="15" width="1" height="1"/><rect x="8" y="19" width="1" height="1"/><rect x="8" y="20" width="1" height="1"/><rect x="9" y="1" width="1" height="1"/><rect x="9" y="4" width="1" height="1"/><rect x="9" y="6" width="1" height="1"/><rect x="9" y="9" width="1" height="1"/><rect x="9" y="11" width="1" height="1"/><rect x="9" y="14" width="1" height="1"/><rect x="9" y="16" width="1" height="1"/><rect x="9" y="19" width="1" height="1"/><rect x="10" y="0" width="1" height="1"/><rect x="10" y="2" width="1" height="1"/><rect x="10" y="5" width="1" height="1"/><rect x="10" y="7" width="1" height="1"/><rect x="10" y="10" width="1" height="1"/><rect x="10" y="12" width="1" height="1"/><rect x="10" y="15" width="1" height="1"/><rect x="10" y="17" width="1" height="1"/><rect x="10" y="20" width="1" height="1"/><rect x="11" y="1" width="1" height="1"/><rect x="11" y="2" width="1" height="1"/><rect x="11" y="6" width="1" height="1"/><rect x="11" y="7" width="1" height="1"/><rect x="11" y="11" width="1" height="1"/><rect x="11" y="12" width="1" height="1"/><rect x="11" y="16" width="1" height="1"/><rect x="11" y="17" width="1" height="1"/><rect x="13" y="0" width="1" height="1"/><rect x="13" y="4" width="1" height="1"/><rect x="13" y="5" width="1" height="1"/><rect x="13" y="9" width="1" height="1"/><rect x="13" y="10" width="1" height="1"/><rect x="13" y="14" width="1" height="1"/><rect x="13" y="15" width="1" height="1"/><rect x="13" y="19" width="1" height="1"/><rect x="13" y="20" width="1" height="1"/><rect x="14" y="9" width="1" height="1"/><rect x="14" y="11" width="1" height="1"/><rect x="14" y="14" width="1" height="1"/><rect x="14" y="16" width="1" height="1"/><rect x="14" y="19" width="1" height="1"/><rect x="15" y="7" width="1" height="1"/><rect x="15" y="10" width="1" height="1"/><rect x="15" y="12" width="1" height="1"/><rect x="15" y="15" width="1" height="1"/><rect x="15" y="17" width="1" height="1"/><rect x="15" y="20" width="1" height="1"/><rect x="16" y="7" width="1" height="1"/><rect x="16" y="11" width="1" height="1"/><rect x="16" y="12" width="1" height="1"/><rect x="16" y="16" width="1" height="1"/><rect x="16" y="17" width="1" height="1"/><rect x="18" y="9" width="1" height="1"/><rect x="18" y="10" width="1" height="1"/><rect x="18" y="14" width="1" height="1"/><rect x="18" y="15" width="1" height="1"/><rect x="18" y="19" width="1" height="1"/><rect x="18" y="20" width="1" height="1"/><rect x="19" y="9" width="1" height="1"/><rect x="19" y="11" width="1" height="1"/><rect x="19" y="14" width="1" height="1"/><rect x="19" y="16" width="1" height="1"/><rect x="19" y="19" width="1" height="1"/><rect x="20" y="7" width="1" height="1"/><rect x="20" y="10" width="1" height="1"/><rect x="20" y="12" width="1" height="1"/><rect x="20" y="15" width="1" height="1"/><rect x="20" y="17" width="1" height="1"/><rect x="20" y="20" width="1" height="1"/><path d="M0 0h7v7h-7z M1 1v5h5v-5z" fill-rule="evenodd"/><rect x="2" y="2" width="3" height="3"/><path d="M14 0h7v7h-7z M15 1v5h5v-5z" fill-rule="evenodd"/><rect x="16" y="2" width="3" height="3"/><path d="M0 14h7v7h-7z M1 15v5h5v-5z" fill-rule="evenodd"/><rect x="2" y="16" width="3" height="3"/></svg>
+              <div class="addr">收款地址（你自己的钱包）<code>T9yD…k3Qp</code><span class="copyb">复制地址</span></div>
+            </div>
+            <p class="note">发票上写明网络，客户就不容易转错。</p>
+          </div>
+          <div class="card rec">
+            <div class="rh"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>对账表 · 10 月<span class="sheets" lang="en">Google Sheets</span></div>
+            <table>
+              <caption class="vh">10 月对账表示例</caption>
+              <thead>
+                <tr>
+                  <th scope="col">日期</th>
+                  <th scope="col">发票</th>
+                  <th scope="col" class="r">USDT</th>
+                  <th scope="col">状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10-03</td>
+                  <td>INV-0010</td>
+                  <td class="r">800</td>
+                  <td><span class="st ok">已到账</span></td>
+                </tr>
+                <tr>
+                  <td>10-11</td>
+                  <td>INV-0011</td>
+                  <td class="r">450</td>
+                  <td><span class="st ok">已到账</span></td>
+                </tr>
+                <tr class="hl">
+                  <td>10-24</td>
+                  <td>INV-0012</td>
+                  <td class="r">1,200</td>
+                  <td><span class="st ok">已到账</span></td>
+                </tr>
+                <tr>
+                  <td>10-29</td>
+                  <td>INV-0013</td>
+                  <td class="r">600</td>
+                  <td><span class="st wait">待付款</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="sum"><span>本月已到账</span><b>2,450 USDT</b></p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <div class="trust">
+      <div class="w">
+        <div class="t"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12.5h2M3 10h18"/></svg><div><b>不代收</b><span>资金直接进入你自己的钱包</span></div></div>
+        <div class="t"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg><div><b>不换汇</b><span>不做 OTC</span></div></div>
+        <div class="t"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div><b>不碰私钥</b><span>全程由你本人操作</span></div></div>
+        <div class="t"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 13h5M10 17h5"/></svg><div><b>不提供税务建议</b><span>导出只是交易表格</span></div></div>
+      </div>
+    </div>
+
     <section aria-labelledby="services-title">
-      <div class="wrap">
-        <p class="eyebrow">我们帮你做三件事</p>
-        <h2 id="services-title">少踩坑、省时间、账清楚</h2>
-        <div class="grid">
-          <article class="item">
-            <p class="num">一</p>
+      <div class="w g12">
+        <div class="head">
+          <p class="ey">我们帮你做三件事</p>
+          <h2 id="services-title">少踩坑、<br class="mb">省时间、账清楚</h2>
+        </div>
+        <div class="feat">
+          <article class="f">
+            <p class="n">01</p>
             <h3>少踩坑</h3>
             <p>只用一条链。发票上写明网络，再给你一份“转错链”检查清单，减少丢币。</p>
           </article>
-          <article class="item">
-            <p class="num">二</p>
+          <article class="f">
+            <p class="n">02</p>
             <h3>省时间</h3>
             <p>1–2 小时屏幕共享，手把手设好钱包、发票模板和对账表。</p>
           </article>
-          <article class="item">
-            <p class="num">三</p>
+          <article class="f">
+            <p class="n">03</p>
             <h3>账清楚</h3>
             <p>每月按区块浏览器导出的数据逐笔对账。“搭建 + 报税导出”可直接交给会计师。</p>
           </article>
@@ -111,111 +149,132 @@
       </div>
     </section>
 
-    <section class="dark" aria-labelledby="boundary-title">
-      <div class="wrap">
-        <p class="eyebrow">边界 · 为什么可以放心</p>
-        <h2 id="boundary-title">我们不碰你的钱</h2>
-        <ul>
-          <li>不代收、不托管：资金直接进入你自己的钱包</li>
-          <li>不换汇，不做 OTC</li>
-          <li>不接触、不保管私钥和助记词，全程由你本人操作</li>
-          <li>不提供税务、法律或投资建议；报税导出只是整理好的交易表格</li>
+    <section class="tight" aria-labelledby="boundary-title">
+      <div class="w g12">
+        <div class="bound">
+          <p class="ey">边界 · 为什么可以放心</p>
+          <h2 id="boundary-title">我们不碰你的钱</h2>
+        </div>
+        <ul class="bl">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>不代收、不托管：资金直接进入你自己的钱包</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>不换汇，不做 OTC</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>不接触、不保管私钥和助记词，全程由你本人操作</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>不提供税务、法律或投资建议；报税导出只是整理好的交易表格</li>
         </ul>
       </div>
     </section>
 
-    <section aria-labelledby="steps-title">
-      <div class="wrap">
-        <p class="eyebrow">流程</p>
-        <h2 id="steps-title">四步搭好</h2>
+    <section class="how" id="how" aria-labelledby="steps-title">
+      <div class="w g12">
+        <div class="bound">
+          <p class="ey">流程</p>
+          <h2 id="steps-title">四步搭好</h2>
+        </div>
         <ol class="steps">
-          <li><strong>15 分钟免费诊断</strong><br>了解你的收款频率和客户习惯，选定一条链。</li>
-          <li><strong>1–2 小时屏幕共享搭建</strong><br>在你自己的钱包上设置，私钥只由你操作。</li>
-          <li><strong>发票模板 + Google Sheets 对账表</strong><br>配好标明网络的发票和对账表，教你怎么用。</li>
-          <li><strong>按月对账（可选）</strong><br>根据区块浏览器导出数据，核对发票和到账。</li>
+          <li><h3>15 分钟免费诊断</h3><p>了解你的收款频率和客户习惯，选定一条链。</p></li>
+          <li><h3>1–2 小时屏幕共享搭建</h3><p>在你自己的钱包上设置，私钥只由你操作。</p></li>
+          <li><h3>发票模板 + Google Sheets 对账表</h3><p>配好标明网络的发票和对账表，教你怎么用。</p></li>
+          <li><h3>按月对账（可选）</h3><p>根据区块浏览器导出数据，核对发票和到账。</p></li>
         </ol>
       </div>
     </section>
 
-    <section aria-labelledby="pricing-title">
-      <div class="wrap">
-        <p class="eyebrow">套餐</p>
-        <h2 id="pricing-title">价格</h2>
-        <div class="grid">
-          <article class="item">
+    <section id="price" aria-labelledby="pricing-title">
+      <div class="w g12">
+        <div class="head center">
+          <p class="ey">套餐</p>
+          <h2 id="pricing-title">价格</h2>
+        </div>
+        <div class="plans">
+          <article class="plan">
             <h3>搭建</h3>
             <p class="price">$300</p>
-            <small>一次性</small>
+            <p class="unit">一次性</p>
+            <a class="btn g full" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
             <ul>
-              <li>15 分钟诊断</li>
-              <li>1–2 小时屏幕共享搭建</li>
-              <li>标明网络的发票模板</li>
-              <li>Google Sheets 对账表</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>15 分钟诊断</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>1–2 小时屏幕共享搭建</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>标明网络的发票模板</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Google Sheets 对账表</li>
             </ul>
           </article>
-          <article class="item item-accent">
+          <article class="plan featured">
+            <span class="tag">推荐</span>
             <h3>搭建 + 报税导出</h3>
             <p class="price">$600</p>
-            <small>一次性</small>
+            <p class="unit">一次性</p>
+            <a class="btn p full" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
             <ul>
-              <li>搭建的全部内容</li>
-              <li>年度 / 季度交易导出整理</li>
-              <li>可直接交给会计师</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>搭建的全部内容</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>年度 / 季度交易导出整理</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>可直接交给会计师</li>
             </ul>
           </article>
-          <article class="item">
+          <article class="plan">
             <h3>月度对账</h3>
             <p class="price">$100–200</p>
-            <small>每月，按笔数定价</small>
+            <p class="unit">每月，按笔数定价</p>
+            <a class="btn g full" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
             <ul>
-              <li>按区块浏览器数据核对收款与发票</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>按区块浏览器数据核对收款与发票</li>
             </ul>
           </article>
-        </div>
-        <div class="cta">
-          <a class="btn btn-primary" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
-          <a class="btn btn-secondary" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
         </div>
       </div>
     </section>
 
-    <section aria-labelledby="faq-title">
-      <div class="wrap">
-        <p class="eyebrow">常见问题</p>
-        <h2 id="faq-title" lang="en">FAQ</h2>
+    <section class="tight" id="faq" aria-labelledby="faq-title">
+      <div class="w g12">
+        <div class="faqh">
+          <p class="ey">常见问题</p>
+          <h2 id="faq-title" lang="en">FAQ</h2>
+        </div>
         <div class="faq">
           <details open>
-            <summary>你们会经手我的钱吗？</summary>
+            <summary>你们会经手我的钱吗？<i class="mark" aria-hidden="true"></i></summary>
             <p>不会。客户直接付到你自己的钱包，我们看不到也动不了。</p>
           </details>
           <details>
-            <summary>需要给你们私钥或助记词吗？</summary>
+            <summary>需要给你们私钥或助记词吗？<i class="mark" aria-hidden="true"></i></summary>
             <p>不需要，也请不要给任何人。屏幕共享时涉及私钥的步骤由你自己操作。</p>
           </details>
           <details>
-            <summary>为什么只用一条链？</summary>
+            <summary>为什么只用一条链？<i class="mark" aria-hidden="true"></i></summary>
             <p>链越多，客户越容易转错。固定一条，发票上写清楚，出错的机会少很多。</p>
           </details>
           <details>
-            <summary>报税导出算税务建议吗？</summary>
+            <summary>报税导出算税务建议吗？<i class="mark" aria-hidden="true"></i></summary>
             <p>不算。我们只把交易整理成表格，怎么报税请问你的会计师。</p>
           </details>
           <details>
-            <summary>服务哪些地区？</summary>
+            <summary>服务哪些地区？<i class="mark" aria-hidden="true"></i></summary>
             <p>香港、台湾、新加坡、马来西亚及其他海外地区，不服务中国大陆客户。</p>
           </details>
         </div>
       </div>
     </section>
-  </main>
-  <footer class="site-footer" aria-labelledby="footer-title">
-    <div class="wrap">
-      <h2 id="footer-title">先聊 15 分钟，看适不适合你</h2>
-      <div class="cta">
-        <a class="btn btn-primary" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
-        <a class="btn btn-secondary" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
+
+    <div class="final">
+      <div class="w">
+        <div class="band">
+          <h2>先聊 15 分钟，<br class="mb">看适不适合你</h2>
+          <div class="cta">
+            <a class="btn p" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a class="btn s" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
+          </div>
+        </div>
       </div>
+    </div>
+  </main>
+  <footer>
+    <div class="w">
+      <a class="brand" href="#main">UBook</a>
       <p class="fine">UBook 不托管资金、不换汇、不接触私钥、不提供税务建议。</p>
+      <div class="fl">
+        <a data-cta="BOOK_DIAGNOSIS" href="#book">预约诊断</a>
+        <a data-cta="FREE_TEMPLATE" href="#book">收 U 模板</a>
+        <span>© 2026 UBook</span>
+      </div>
     </div>
   </footer>
 </body>

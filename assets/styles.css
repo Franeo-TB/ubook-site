@@ -1404,3 +1404,142 @@ footer .reach {
     border: 1px solid ButtonText;
   }
 }
+
+.keep {
+  white-space: nowrap;
+}
+
+.paylater {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+  margin: 14px 0 0;
+  color: #dfe4ee;
+  font: 600 14px/1.4 Inter, "Noto Sans SC", sans-serif;
+}
+
+.paylater svg {
+  flex: none;
+  color: #7fd3b0;
+}
+
+.pledge {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.64));
+  box-shadow:
+    inset 0 0 0 1px rgba(15, 26, 51, 0.08),
+    0 12px 32px -22px rgba(15, 26, 51, 0.45);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+#price .pledge {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 760px);
+  margin-top: var(--s4);
+}
+
+.pledge svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--ok);
+}
+
+.pledge div {
+  min-width: 0;
+}
+
+.pledge-title {
+  margin: 0;
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.pledge p:last-child {
+  margin: 6px 0 0;
+  color: var(--ink2);
+  font-size: 15px;
+}
+
+.slot {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--s4) var(--s3);
+  border-radius: 20px;
+  color: #e7ebf3;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 48%),
+    rgba(15, 26, 51, 0.94);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 18px 40px -24px rgba(15, 26, 51, 0.6);
+}
+
+.slot h2 {
+  color: #fff;
+  font-size: 26px;
+  line-height: 1.35;
+}
+
+.slot p {
+  margin-top: 12px;
+  color: #c9d0de;
+  font-size: 16px;
+}
+
+.slots-left {
+  font-weight: 700;
+}
+
+.slot .p {
+  margin-top: var(--s3);
+  background: #fff;
+  color: var(--ink);
+}
+
+.slot .p:hover {
+  background: #eef0f4;
+  color: var(--ink);
+}
+
+.slot :focus-visible {
+  outline-color: var(--ink);
+  box-shadow: 0 0 0 5px #fff;
+}
+
+@media (min-width: 720px) {
+  .slot h2 {
+    font-size: 32px;
+  }
+}
+
+@media (forced-colors: active) {
+  .pledge,
+  .slot,
+  .slot .p {
+    background: ButtonFace;
+    color: ButtonText;
+    box-shadow: none;
+    border: 1px solid ButtonText;
+  }
+
+  .pledge-title,
+  .slot h2,
+  .slot p,
+  .paylater {
+    color: ButtonText;
+  }
+}

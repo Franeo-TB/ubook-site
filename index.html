@@ -3,27 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UBook｜U 收款搭建与对账</title>
-  <meta name="description" content="给海外华人自由职业者和小团队。我们陪你把 USDT/USDC 收款和对账搭好。钱始终在你自己的钱包里。香港、台湾、新加坡、马来西亚。">
+  <title>稳定币（USDT/USDC）收款与对账，当天上线｜海外自由职业者｜UBook</title>
+  <meta name="description" content="自由职业者怎么安全收 USDT？UBook 帮海外华人自由职业者和小团队当天配好稳定币收款：只用一条链，用你自己的钱包，发票标明网络，再配一份对账表。确认能收到再付钱。">
+  <link rel="canonical" href="https://ubookpay.com/">
   <meta name="theme-color" content="#FAFAF8">
   <meta name="color-scheme" content="light">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <!-- CTA 链接只在 assets/cta.js 修改：BOOK_DIAGNOSIS（预约 15 分钟免费诊断）、FREE_TEMPLATE（免费领取收 U 模板）。 -->
-  <meta property="og:title" content="UBook｜U 收款搭建与对账">
-  <meta property="og:description" content="给海外华人自由职业者和小团队。我们陪你把 USDT/USDC 收款和对账搭好。钱始终在你自己的钱包里。香港、台湾、新加坡、马来西亚。">
+  <!-- CTA 链接只在 assets/cta.js 修改：BOOK_DIAGNOSIS（预约 15 分钟免费体检）、FREE_TEMPLATE（免费领取稳定币收款模板）。统计令牌也只在那里：CF_BEACON_TOKEN。 -->
+  <meta property="og:title" content="稳定币（USDT/USDC）收款与对账，当天上线｜海外自由职业者｜UBook">
+  <meta property="og:description" content="自由职业者怎么安全收 USDT？UBook 帮海外华人自由职业者和小团队当天配好稳定币收款：只用一条链，用你自己的钱包，发票标明网络，再配一份对账表。确认能收到再付钱。">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_Hans">
   <meta property="og:site_name" content="UBook">
-  <meta property="og:image" content="assets/og.png">
+  <meta property="og:image" content="https://ubookpay.com/assets/og.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="UBook：放心收 U，月底的账也一清二楚">
+  <meta property="og:image:alt" content="UBook：放心收稳定币，月底的账也一清二楚">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="UBook｜U 收款搭建与对账">
-  <meta name="twitter:description" content="给海外华人自由职业者和小团队。我们陪你把 USDT/USDC 收款和对账搭好。钱始终在你自己的钱包里。">
-  <meta name="twitter:image" content="assets/og.png">
-  <meta name="twitter:image:alt" content="UBook：放心收 U，月底的账也一清二楚">
+  <meta name="twitter:title" content="稳定币（USDT/USDC）收款与对账，当天上线｜海外自由职业者｜UBook">
+  <meta name="twitter:description" content="自由职业者怎么安全收 USDT？UBook 帮海外华人自由职业者和小团队当天配好稳定币收款：只用一条链，用你自己的钱包，发票标明网络，再配一份对账表。确认能收到再付钱。">
+  <meta name="twitter:image" content="https://ubookpay.com/assets/og.png">
+  <meta name="twitter:image:alt" content="UBook：放心收稳定币，月底的账也一清二楚">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -32,6 +33,133 @@
   <link rel="preload" href="assets/fonts/noto-sans-sc-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/cta.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ubookpay.com/#organization",
+      "name": "UBook",
+      "url": "https://ubookpay.com/",
+      "logo": "https://ubookpay.com/assets/og.png",
+      "sameAs": [
+        "https://x.com/Zhoumancang",
+        "https://t.me/Fontinz"
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "稳定币收款搭建与对账",
+      "provider": {
+        "@id": "https://ubookpay.com/#organization"
+      },
+      "areaServed": [
+        "HK",
+        "TW",
+        "SG",
+        "MY",
+        "JP",
+        "北美",
+        "欧洲"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "免费 15 分钟收款体检加模板包",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "稳定币收款当天上线包",
+          "price": "300",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "每月对账",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "150",
+            "priceCurrency": "USD",
+            "billingDuration": "P1M"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "自由职业者怎么收 USDT？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "先选定一条链，用自己的钱包地址收款，并把地址和网络一起写在发票上。第一次合作时，让客户先转一笔小额测试款，确认到账后再付全款。每笔到账都记进对账表，写上日期、发票号、金额和交易哈希。UBook 会当天帮你把这套流程配好。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "USDT 打错链了怎么办？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不一定会丢，关键看收款地址在那条链上是不是由你自己控制。如果你用的是自托管钱包，而对方把钱转到了另一条兼容的链（比如同一个 0x 地址的另一条 EVM 链），在钱包里切换到那条网络，通常就能看到并取回。如果转到的是交易所充值地址，而交易所不支持那条网络，只能联系交易所客服，不保证能找回。最有效的办法是提前预防：只用一条链，发票上写明网络，先转一笔小额测试。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "TRC20 和 ERC20 选哪个？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "选你的客户最常用、手续费你们都能接受的那一条，并且只用它。一般来说，TRC20 的转账费用比 ERC20 低；ERC20 在以太坊上，gas 费会随网络拥堵程度变化。两条链的地址格式不同，发票上一定要写清楚是哪条。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "客户付款时不写备注，怎么对上发票？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "普通的 USDT 链上转账本来就带不了备注，所以要靠金额、时间和付款地址来对应。常见做法是给每张发票设一个独一无二的金额，比如在金额末尾加几分钱的尾数当识别码；再记下客户常用的付款地址。对账表里留一列交易哈希，在区块浏览器上就能逐笔核对。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "你们会经手我的钱吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不会。客户的款项直接付到你自己的钱包，UBook 不代收、不托管、不换汇。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "需要把私钥或助记词给你们吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不需要，也请不要给任何人。配置时凡是涉及私钥的步骤，都由你本人操作。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "要先付钱吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不用。我们当天帮你配好，当天用一笔小额测试款确认能收到，之后你再付搭建费。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "对账表算税务建议吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不算。我们只是把链上交易整理成表格，怎么报税请问你的会计师。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
   <a class="skip" href="#main">跳到主要内容</a>
@@ -43,21 +171,23 @@
         <a href="#price">价格</a>
         <a href="#faq">常见问题</a>
       </nav>
-      <a class="btn p sm" data-cta="BOOK_DIAGNOSIS" href="#book">预约诊断</a>
+      <a class="btn p sm" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检</a>
     </div>
   </header>
   <main id="main" tabindex="-1">
     <section class="hero" aria-labelledby="hero-title">
       <div class="w g12">
         <div class="copy">
-          <p class="loc"><i aria-hidden="true"></i>香港 · 台湾 · 新加坡 · 马来西亚</p>
-          <h1 id="hero-title">放心收 U，<br>月底的账<br class="mb">也一清二楚</h1>
-          <p class="lead">给海外华人自由职业者和小团队。我们陪你把 USDT/USDC 收款和对账搭好。钱始终在你自己的钱包里。</p>
+          <p class="loc"><i aria-hidden="true"></i>服务地区：香港、台湾、新加坡、马来西亚、日本、北美、欧洲</p>
+          <h1 id="hero-title">今天配好稳定币收款，确认收到第一笔再付钱</h1>
+          <p class="lead">稳定币（如 USDT、USDC）。钱始终在你自己的钱包里。</p>
+          <p class="dream">从今天起，海外客户付稳定币不用你再教一遍；月底 10 分钟对完账。</p>
           <div class="cta" id="book">
-            <a class="btn p" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-            <a class="btn s" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
+            <a class="btn p" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <p class="nudge">不推销，帮你找出收款最容易丢钱的一步</p>
+            <a class="textlink" data-cta="FREE_TEMPLATE" data-track="template" href="#book">免费领取稳定币收款模板</a>
           </div>
-          <p class="paylater"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>确认能收款再付钱</p>
+          <p class="paylater"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>当天配好、当天测试收款，确认能收到再付钱</p>
         </div>
         <div class="vis" role="group" aria-label="发票与对账表示例">
           <div class="card inv">
@@ -115,6 +245,13 @@
       </div>
     </section>
 
+    <section aria-labelledby="what-title">
+      <div class="w">
+        <h2 id="what-title">UBook 是什么</h2>
+        <p>UBook 是一项稳定币收款搭建服务，帮海外华人自由职业者和小团队当天配好 USDT/USDC 收款：只用一条链，用客户自己的钱包，发票上标明网络，再配一份对账表。UBook 不代收、不换汇、不碰私钥。服务香港、台湾、新加坡、马来西亚、日本、北美和欧洲。</p>
+      </div>
+    </section>
+
     <div class="trust">
       <div class="w">
         <div class="t"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12.5h2M3 10h18"/></svg><div><b>不代收</b><span>资金直接进入你自己的钱包</span></div></div>
@@ -123,6 +260,38 @@
         <div class="t"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 13h5M10 17h5"/></svg><div><b>不提供税务建议</b><span>导出只是交易表格</span></div></div>
       </div>
     </div>
+
+    <section id="pains" aria-labelledby="pains-title">
+      <div class="w">
+        <div class="head">
+          <p class="ey">常见情况</p>
+          <h2 id="pains-title">你是不是也遇到过</h2>
+        </div>
+        <ul class="pains">
+          <li>客户转到了另一条链，钱卡在那里。</li>
+          <li>每次收款都要再讲一遍该用哪个网络。</li>
+          <li>月底对账，到账和发票对不上。</li>
+          <li>哪些款还没到，要一笔笔翻记录才知道。</li>
+        </ul>
+        <a class="btn s" data-cta="BOOK_DIAGNOSIS" data-track="pain-cta" href="#book">这些问题当天就能解决，预约免费体检</a>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <div class="w">
+        <h2 id="about-title">关于我</h2>
+        <p class="about-copy">UBook 是一家一人公司，由一位海外华人创始人独立运营。</p>
+        <p class="about-copy">我见过太多自由职业者：客户说钱打过来了，自己却在钱包里怎么也找不到；或者月底一堆转账记录，说不清哪笔是哪个项目。</p>
+        <p class="about-copy">所以我做的事很简单：帮你用一条链、你自己的钱包、标明网络的发票，把稳定币收款和对账理顺。每一位客户都由我亲自配置。</p>
+        <p class="about-copy">我不代收资金、不换汇、不碰私钥，也不提供税务建议。</p>
+        <p class="about-copy">平时的进展会在 X 上公开记录。 <a data-track="contact" href="https://x.com/Zhoumancang" target="_blank" rel="noopener">@Zhoumancang</a></p>
+        <nav class="reach" aria-label="联系方式">
+          <a data-track="contact" href="https://t.me/Fontinz" target="_blank" rel="noopener" aria-label="Telegram 私信 @Fontinz，在新标签页打开"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.8 3.5h10.4v6.6a1 1 0 0 1-1 1H8.1L5.6 13.4V11.1H3.8a1 1 0 0 1-1-1V3.5z"/></svg>Telegram</a>
+          <a data-track="contact" href="https://wa.me/17788779257" target="_blank" rel="noopener" aria-label="WhatsApp 私信 +1 778-877-9257，在新标签页打开"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.2h.7l.9 2.1-1.1 1.1a6.6 6.6 0 0 0 3.8 3.8l1.1-1.1 2.1.9v.7a1.1 1.1 0 0 1-1.1 1.1A8.6 8.6 0 0 1 3.2 4.3a1.1 1.1 0 0 1 1.1-1.1z"/></svg>WhatsApp</a>
+          <a data-track="contact" href="mailto:leofrank1017@gmail.com" aria-label="给 leofrank1017@gmail.com 发邮件"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.2" y="3.6" width="11.6" height="8.8" rx="1.4"/><path d="m3 4.8 5 3.7 5-3.7"/></svg>邮箱</a>
+        </nav>
+      </div>
+    </section>
 
     <section aria-labelledby="services-title">
       <div class="w g12">
@@ -144,7 +313,7 @@
           <article class="f">
             <p class="n">03</p>
             <h3>账清楚</h3>
-            <p>每月按区块浏览器导出的数据逐笔对账。“搭建 + 报税导出”可直接交给会计师。</p>
+            <p>每月按区块浏览器导出的数据逐笔对账，整理成可以交给会计师的表格。</p>
           </article>
         </div>
       </div>
@@ -183,57 +352,66 @@
     <section id="price" aria-labelledby="pricing-title">
       <div class="w g12">
         <div class="head center">
-          <p class="ey">套餐</p>
-          <h2 id="pricing-title">价格</h2>
+          <p class="ey">价格</p>
+          <h2 id="pricing-title">稳定币收款<span class="keep">不丢钱</span>，每一笔都对得上</h2>
         </div>
+        <!-- 60 秒演示：只改 DEMO_SRC。留空则播放器不出现。 -->
+        <video class="demo" data-demo hidden controls playsinline preload="none" aria-label="60 秒演示：一笔测试转账，并记进对账表"></video>
+        <script>
+          (function () {
+            var DEMO_SRC = "";
+            if (!DEMO_SRC) return;
+            var video = document.currentScript.previousElementSibling;
+            if (!video || video.tagName !== "VIDEO") return;
+            video.src = DEMO_SRC;
+            video.hidden = false;
+          })();
+        </script>
         <div class="plans">
           <article class="plan">
-            <h3>搭建</h3>
-            <p class="price">$300</p>
-            <p class="unit">一次性</p>
-            <a class="btn g full" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
-            <ul>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>15 分钟诊断</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>1–2 小时屏幕共享搭建</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>标明网络的发票模板</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Google Sheets 对账表</li>
-            </ul>
+            <h3>免费 · 收款体检（15 分钟）</h3>
+            <p class="price">免费</p>
+            <p class="unit">15 分钟</p>
+            <a class="btn g full" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检</a>
+            <p class="pack">附<a class="textlink" data-cta="FREE_TEMPLATE" data-track="template" href="#book">免费领取稳定币收款模板</a>：发票、对账表、错链检查清单。</p>
           </article>
           <article class="plan featured">
-            <span class="tag">推荐</span>
-            <h3>搭建 + 报税导出</h3>
-            <p class="price">$600</p>
-            <p class="unit">一次性</p>
-            <a class="btn p full" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
-            <ul>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>搭建的全部内容</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>年度 / 季度交易导出整理</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>可直接交给会计师</li>
+            <span class="tag">主推</span>
+            <h3>稳定币收款当天上线包：当天收到第一笔，月底账一次对清</h3>
+            <ul class="stack">
+              <li><span>一对一配置和当天测试收款</span><b>$300</b></li>
+              <li><span>标明网络的发票模板</span><b>$50</b></li>
+              <li><span>中英文付款说明</span><b>$50</b></li>
+              <li><span>对账表和填写方法</span><b>$100</b></li>
+              <li><span>收入记录导出模板</span><b>$150</b></li>
+              <li><span>首月一次对账检查</span><b>$100</b></li>
             </ul>
+            <p class="was"><span>参考总价值</span> <s>$750</s></p>
+            <p class="refnote">以上为单项参考价值，不是过往成交价。</p>
+            <p class="price">$300</p>
+            <p class="unit">正价</p>
+            <p class="deal"><span>创始名额</span> <b>$150</b> <span>换一段真实评价</span></p>
+            <a class="btn p full" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检</a>
+            <p class="assure">当天配好、当天测试收款，确认能收到再付钱</p>
           </article>
           <article class="plan">
-            <h3>月度对账</h3>
-            <p class="price">$100–200</p>
-            <p class="unit">每月，按笔数定价</p>
-            <a class="btn g full" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
+            <h3>$150 / 月 · 每月对账</h3>
+            <p class="price">$150</p>
+            <p class="unit">/ 月</p>
+            <a class="btn g full" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检</a>
             <ul>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>按区块浏览器数据核对收款与发票</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>每月固定工作日交付对账表，标出未付款和金额不符的单</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>随时可导出年度收入记录</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>不绑定，随时可停</li>
             </ul>
           </article>
-        </div>
-        <div class="pledge">
-          <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>
-          <div>
-            <p class="pledge-title">先搭好，确认能收款再付钱。</p>
-            <p>我们一起把钱包、发票和对账表<span class="keep">搭好</span>，你用一笔小额测试款确认到账后再付<span class="keep">搭建费</span>。</p>
-          </div>
         </div>
         <div class="reach">
           <p class="reach-label">有问题？先私信我</p>
           <div class="reach-links">
-            <a href="https://t.me/Fontinz" target="_blank" rel="noopener" aria-label="Telegram 私信 @Fontinz，在新标签页打开"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.8 3.5h10.4v6.6a1 1 0 0 1-1 1H8.1L5.6 13.4V11.1H3.8a1 1 0 0 1-1-1V3.5z"/></svg>Telegram</a>
-            <a href="https://wa.me/17788779257" target="_blank" rel="noopener" aria-label="WhatsApp 私信 +1 778-877-9257，在新标签页打开"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.2h.7l.9 2.1-1.1 1.1a6.6 6.6 0 0 0 3.8 3.8l1.1-1.1 2.1.9v.7a1.1 1.1 0 0 1-1.1 1.1A8.6 8.6 0 0 1 3.2 4.3a1.1 1.1 0 0 1 1.1-1.1z"/></svg>WhatsApp</a>
-            <a href="mailto:leofrank1017@gmail.com" aria-label="给 leofrank1017@gmail.com 发邮件"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.2" y="3.6" width="11.6" height="8.8" rx="1.4"/><path d="m3 4.8 5 3.7 5-3.7"/></svg>邮箱</a>
+            <a data-track="contact" href="https://t.me/Fontinz" target="_blank" rel="noopener" aria-label="Telegram 私信 @Fontinz，在新标签页打开"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.8 3.5h10.4v6.6a1 1 0 0 1-1 1H8.1L5.6 13.4V11.1H3.8a1 1 0 0 1-1-1V3.5z"/></svg>Telegram</a>
+            <a data-track="contact" href="https://wa.me/17788779257" target="_blank" rel="noopener" aria-label="WhatsApp 私信 +1 778-877-9257，在新标签页打开"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.2h.7l.9 2.1-1.1 1.1a6.6 6.6 0 0 0 3.8 3.8l1.1-1.1 2.1.9v.7a1.1 1.1 0 0 1-1.1 1.1A8.6 8.6 0 0 1 3.2 4.3a1.1 1.1 0 0 1 1.1-1.1z"/></svg>WhatsApp</a>
+            <a data-track="contact" href="mailto:leofrank1017@gmail.com" aria-label="给 leofrank1017@gmail.com 发邮件"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.2" y="3.6" width="11.6" height="8.8" rx="1.4"/><path d="m3 4.8 5 3.7 5-3.7"/></svg>邮箱</a>
           </div>
         </div>
       </div>
@@ -244,9 +422,10 @@
         <div class="slot">
           <!-- 剩余名额只改 slots-left 里的数字 -->
           <h2 id="founding-title">创始客户名额：剩 <span class="slots-left">5</span> 个</h2>
+          <p>满 5 位后恢复 $300。</p>
           <p>前 5 位客户，搭建费半价，$150，<span class="keep">不是 $300</span>。</p>
           <p>做完后写一段短评，讲你的真实体验。可以匿名，也可以用昵称。我们可能会放在这页上。</p>
-          <a class="btn p" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
+          <a class="btn p" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检</a>
         </div>
       </div>
     </section>
@@ -259,24 +438,44 @@
         </div>
         <div class="faq">
           <details open>
-            <summary>你们会经手我的钱吗？<i class="mark" aria-hidden="true"></i></summary>
-            <p>不会。客户直接付到你自己的钱包，我们看不到也动不了。</p>
+            <summary><h3>自由职业者怎么收 USDT？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>先选定一条链，用自己的钱包地址收款，并把地址和网络一起写在发票上。第一次合作时，让客户先转一笔小额测试款，确认到账后再付全款。每笔到账都记进对账表，写上日期、发票号、金额和交易哈希。UBook 会当天帮你把这套流程配好。</p>
           </details>
           <details>
-            <summary>需要给你们私钥或助记词吗？<i class="mark" aria-hidden="true"></i></summary>
-            <p>不需要，也请不要给任何人。屏幕共享时涉及私钥的步骤由你自己操作。</p>
+            <summary><h3>USDT 打错链了怎么办？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>不一定会丢，关键看收款地址在那条链上是不是由你自己控制。如果你用的是自托管钱包，而对方把钱转到了另一条兼容的链（比如同一个 0x 地址的另一条 EVM 链），在钱包里切换到那条网络，通常就能看到并取回。如果转到的是交易所充值地址，而交易所不支持那条网络，只能联系交易所客服，不保证能找回。最有效的办法是提前预防：只用一条链，发票上写明网络，先转一笔小额测试。</p>
           </details>
           <details>
-            <summary>为什么只用一条链？<i class="mark" aria-hidden="true"></i></summary>
+            <summary><h3>TRC20 和 ERC20 选哪个？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>选你的客户最常用、手续费你们都能接受的那一条，并且只用它。一般来说，TRC20 的转账费用比 ERC20 低；ERC20 在以太坊上，gas 费会随网络拥堵程度变化。两条链的地址格式不同，发票上一定要写清楚是哪条。</p>
+          </details>
+          <details>
+            <summary><h3>客户付款时不写备注，怎么对上发票？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>普通的 USDT 链上转账本来就带不了备注，所以要靠金额、时间和付款地址来对应。常见做法是给每张发票设一个独一无二的金额，比如在金额末尾加几分钱的尾数当识别码；再记下客户常用的付款地址。对账表里留一列交易哈希，在区块浏览器上就能逐笔核对。</p>
+          </details>
+          <details>
+            <summary><h3>你们会经手我的钱吗？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>不会。客户的款项直接付到你自己的钱包，UBook 不代收、不托管、不换汇。</p>
+          </details>
+          <details>
+            <summary><h3>需要把私钥或助记词给你们吗？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>不需要，也请不要给任何人。配置时凡是涉及私钥的步骤，都由你本人操作。</p>
+          </details>
+          <details>
+            <summary><h3>要先付钱吗？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>不用。我们当天帮你配好，当天用一笔小额测试款确认能收到，之后你再付搭建费。</p>
+          </details>
+          <details>
+            <summary><h3>对账表算税务建议吗？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>不算。我们只是把链上交易整理成表格，怎么报税请问你的会计师。</p>
+          </details>
+          <details>
+            <summary><h3>为什么只用一条链？</h3><i class="mark" aria-hidden="true"></i></summary>
             <p>链越多，客户越容易转错。固定一条，发票上写清楚，出错的机会少很多。</p>
           </details>
           <details>
-            <summary>报税导出算税务建议吗？<i class="mark" aria-hidden="true"></i></summary>
-            <p>不算。我们只把交易整理成表格，怎么报税请问你的会计师。</p>
-          </details>
-          <details>
-            <summary>服务哪些地区？<i class="mark" aria-hidden="true"></i></summary>
-            <p>香港、台湾、新加坡、马来西亚及其他海外地区，不服务中国大陆客户。</p>
+            <summary><h3>服务哪些地区？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>服务地区：香港、台湾、新加坡、马来西亚、日本、北美、欧洲。</p>
           </details>
         </div>
       </div>
@@ -287,28 +486,37 @@
         <div class="band">
           <h2>先聊 15 分钟，<br class="mb">看适不适合你</h2>
           <div class="cta">
-            <a class="btn p" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-            <a class="btn s" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
+            <a class="btn p" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a class="textlink" data-cta="FREE_TEMPLATE" data-track="template" href="#book">免费领取稳定币收款模板</a>
           </div>
         </div>
       </div>
     </div>
   </main>
   <footer>
+    <div class="w guide">
+      <p class="fine">稳定币收款指南</p>
+      <ul class="guides">
+        <li>《USDT 收款怎么对账》 <span>即将上线</span></li>
+        <li>《USDT 转错链怎么办》 <span>即将上线</span></li>
+      </ul>
+    </div>
     <div class="w">
       <a class="brand" href="#main">UBook</a>
-      <p class="fine">UBook 不托管资金、不换汇、不接触私钥、不提供税务建议。</p>
+      <p class="fine">不代收资金、不换汇、不碰私钥、不提供税务建议。</p>
+      <p class="fine">服务地区：香港、台湾、新加坡、马来西亚、日本、北美、欧洲。</p>
       <div class="fl">
-        <a data-cta="BOOK_DIAGNOSIS" href="#book">预约诊断</a>
-        <a data-cta="FREE_TEMPLATE" href="#book">收 U 模板</a>
+        <a data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检</a>
+        <a data-cta="FREE_TEMPLATE" data-track="template" href="#book">免费领取稳定币收款模板</a>
+        <a href="privacy.html">隐私</a>
         <span>© 2026 UBook</span>
       </div>
     </div>
     <div class="w foot-contact">
       <nav class="reach" aria-label="联系方式">
-        <a href="https://t.me/Fontinz" target="_blank" rel="noopener" aria-label="Telegram 私信 @Fontinz，在新标签页打开"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.8 3.5h10.4v6.6a1 1 0 0 1-1 1H8.1L5.6 13.4V11.1H3.8a1 1 0 0 1-1-1V3.5z"/></svg>Telegram</a>
-        <a href="https://wa.me/17788779257" target="_blank" rel="noopener" aria-label="WhatsApp 私信 +1 778-877-9257，在新标签页打开"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.2h.7l.9 2.1-1.1 1.1a6.6 6.6 0 0 0 3.8 3.8l1.1-1.1 2.1.9v.7a1.1 1.1 0 0 1-1.1 1.1A8.6 8.6 0 0 1 3.2 4.3a1.1 1.1 0 0 1 1.1-1.1z"/></svg>WhatsApp</a>
-        <a href="mailto:leofrank1017@gmail.com" aria-label="给 leofrank1017@gmail.com 发邮件"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.2" y="3.6" width="11.6" height="8.8" rx="1.4"/><path d="m3 4.8 5 3.7 5-3.7"/></svg>邮箱</a>
+        <a data-track="contact" href="https://t.me/Fontinz" target="_blank" rel="noopener" aria-label="Telegram 私信 @Fontinz，在新标签页打开"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.8 3.5h10.4v6.6a1 1 0 0 1-1 1H8.1L5.6 13.4V11.1H3.8a1 1 0 0 1-1-1V3.5z"/></svg>Telegram</a>
+        <a data-track="contact" href="https://wa.me/17788779257" target="_blank" rel="noopener" aria-label="WhatsApp 私信 +1 778-877-9257，在新标签页打开"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.2h.7l.9 2.1-1.1 1.1a6.6 6.6 0 0 0 3.8 3.8l1.1-1.1 2.1.9v.7a1.1 1.1 0 0 1-1.1 1.1A8.6 8.6 0 0 1 3.2 4.3a1.1 1.1 0 0 1 1.1-1.1z"/></svg>WhatsApp</a>
+        <a data-track="contact" href="mailto:leofrank1017@gmail.com" aria-label="给 leofrank1017@gmail.com 发邮件"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.2" y="3.6" width="11.6" height="8.8" rx="1.4"/><path d="m3 4.8 5 3.7 5-3.7"/></svg>邮箱</a>
       </nav>
     </div>
   </footer>

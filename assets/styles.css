@@ -1421,54 +1421,6 @@ footer .reach {
   color: #7fd3b0;
 }
 
-.pledge {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  min-width: 0;
-  max-width: 100%;
-  padding: 16px 18px;
-  border-radius: 16px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.64));
-  box-shadow:
-    inset 0 0 0 1px rgba(15, 26, 51, 0.08),
-    0 12px 32px -22px rgba(15, 26, 51, 0.45);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-}
-
-#price .pledge {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: min(100%, 760px);
-  margin-top: var(--s4);
-}
-
-.pledge svg {
-  flex: none;
-  margin-top: 3px;
-  color: var(--ok);
-}
-
-.pledge div {
-  min-width: 0;
-}
-
-.pledge-title {
-  margin: 0;
-  color: var(--ink);
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.45;
-}
-
-.pledge p:last-child {
-  margin: 6px 0 0;
-  color: var(--ink2);
-  font-size: 15px;
-}
-
 .keep {
   white-space: nowrap;
 }
@@ -1525,16 +1477,19 @@ footer .reach {
 
 @media (min-width: 960px) {
   .plans {
-    align-items: center;
+    align-items: stretch;
+  }
+
+  .plan h3 {
+    min-height: 2.8em;
   }
 
   .plan.featured {
-    padding: 40px var(--s4) 36px;
+    padding: var(--s4);
   }
 }
 
 @media (forced-colors: active) {
-  .pledge,
   .plan.featured {
     background: ButtonFace;
     color: ButtonText;
@@ -1542,7 +1497,6 @@ footer .reach {
     border: 1px solid ButtonText;
   }
 
-  .pledge-title,
   .paylater,
   .plan.featured,
   .plan.featured li,

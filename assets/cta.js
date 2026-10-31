@@ -1,6 +1,6 @@
 /**
  * UBook call-to-action links. This is the only place these URLs are set.
- * BOOK_DIAGNOSIS — 预约 15 分钟免费诊断
+ * BOOK_DIAGNOSIS — 预约免费收款体检
  * FREE_TEMPLATE — 免费领取收 U 模板
  */
 (function () {

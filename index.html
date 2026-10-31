@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#FAFAF8">
   <meta name="color-scheme" content="light">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <!-- CTA 链接只在 assets/cta.js 修改：BOOK_DIAGNOSIS（预约 15 分钟免费诊断）、FREE_TEMPLATE（免费领取收 U 模板）。 -->
+  <!-- CTA 链接只在 assets/cta.js 修改：BOOK_DIAGNOSIS（预约免费收款体检）、FREE_TEMPLATE（免费领取收 U 模板）。 -->
   <meta property="og:title" content="UBook｜U 收款搭建与对账">
   <meta property="og:description" content="给海外华人自由职业者和小团队。我们陪你把 USDT/USDC 收款和对账搭好。钱始终在你自己的钱包里。香港、台湾、新加坡、马来西亚。">
   <meta property="og:type" content="website">
@@ -43,7 +43,7 @@
         <a href="#price">价格</a>
         <a href="#faq">常见问题</a>
       </nav>
-      <a class="btn p sm" data-cta="BOOK_DIAGNOSIS" href="#book">预约诊断</a>
+      <a class="btn p sm" data-cta="BOOK_DIAGNOSIS" href="#book">预约免费收款体检</a>
     </div>
   </header>
   <main id="main" tabindex="-1">
@@ -54,10 +54,10 @@
           <h1 id="hero-title">放心收 U，<br>月底的账<br class="mb">也一清二楚</h1>
           <p class="lead">给海外华人自由职业者和小团队。我们陪你把 USDT/USDC 收款和对账搭好。钱始终在你自己的钱包里。</p>
           <div class="cta" id="book">
-            <a class="btn p" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a class="btn p" data-cta="BOOK_DIAGNOSIS" href="#book">预约免费收款体检<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
             <a class="btn s" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
           </div>
-          <p class="paylater"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>确认能收款再付钱</p>
+          <p class="paylater"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>7 天配好，做不到全额退款</p>
         </div>
         <div class="vis" role="group" aria-label="发票与对账表示例">
           <div class="card inv">
@@ -144,7 +144,7 @@
           <article class="f">
             <p class="n">03</p>
             <h3>账清楚</h3>
-            <p>每月按区块浏览器导出的数据逐笔对账。“搭建 + 报税导出”可直接交给会计师。</p>
+            <p>每月按区块浏览器导出的数据逐笔对账，整理成可以交给会计师的表格。</p>
           </article>
         </div>
       </div>
@@ -183,49 +183,50 @@
     <section id="price" aria-labelledby="pricing-title">
       <div class="w g12">
         <div class="head center">
-          <p class="ey">套餐</p>
-          <h2 id="pricing-title">价格</h2>
+          <p class="ey">价格</p>
+          <h2 id="pricing-title">稳定币收款<span class="keep">不丢钱</span>，每一笔都对得上</h2>
         </div>
         <div class="plans">
           <article class="plan">
-            <h3>搭建</h3>
-            <p class="price">$300</p>
-            <p class="unit">一次性</p>
-            <a class="btn g full" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
-            <ul>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>15 分钟诊断</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>1–2 小时屏幕共享搭建</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>标明网络的发票模板</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Google Sheets 对账表</li>
-            </ul>
+            <h3>免费 · 收款体检（15 分钟）</h3>
+            <p class="price">免费</p>
+            <p class="unit">15 分钟</p>
+            <a class="btn g full" data-cta="BOOK_DIAGNOSIS" href="#book">预约免费收款体检</a>
+            <p class="pack">附<a data-cta="FREE_TEMPLATE" href="#book">免费模板包</a>：发票、对账表、错链检查清单。</p>
           </article>
           <article class="plan featured">
-            <span class="tag">推荐</span>
-            <h3>搭建 + 报税导出</h3>
-            <p class="price">$600</p>
+            <span class="tag">主推</span>
+            <h3>稳定币收款<span class="keep">不丢钱</span> 7 天上线包</h3>
+            <p class="price">$300</p>
             <p class="unit">一次性</p>
-            <a class="btn p full" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
+            <a class="btn p full" data-cta="BOOK_DIAGNOSIS" href="#book">预约免费收款体检</a>
             <ul>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>搭建的全部内容</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>年度 / 季度交易导出整理</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>可直接交给会计师</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>诊断 + 1–2 小时一对一配置</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>选好一条链和一种主币，用你自己的钱包</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>发票模板标明网络，附中英文付款说明</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>小额测试转账</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>对账表配好</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg><span><b>赠品</b>收入记录导出模板 + 首月一次对账检查</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg><span><b>保证</b>7 天内配好并测试转账成功，做不到全额退款</span></li>
             </ul>
           </article>
           <article class="plan">
-            <h3>月度对账</h3>
-            <p class="price">$100–200</p>
-            <p class="unit">每月，按笔数定价</p>
-            <a class="btn g full" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
+            <h3>$150 / 月 · 每月对账</h3>
+            <p class="price">$150</p>
+            <p class="unit">/ 月</p>
+            <a class="btn g full" data-cta="BOOK_DIAGNOSIS" href="#book">预约免费收款体检</a>
             <ul>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>按区块浏览器数据核对收款与发票</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>每月固定工作日交付对账表，标出未付款和金额不符的单</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>随时可导出年度收入记录</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>不绑定，随时可停</li>
             </ul>
           </article>
         </div>
         <div class="pledge">
           <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>
           <div>
-            <p class="pledge-title">先搭好，确认能收款再付钱。</p>
-            <p>我们一起把钱包、发票和对账表<span class="keep">搭好</span>，你用一笔小额测试款确认到账后再付<span class="keep">搭建费</span>。</p>
+            <p class="pledge-title">7 天配好，做不到全额退款。</p>
+            <p>7 天内配好并测试转账成功，做不到全额退款。</p>
           </div>
         </div>
         <div class="reach">
@@ -235,18 +236,6 @@
             <a href="https://wa.me/17788779257" target="_blank" rel="noopener" aria-label="WhatsApp 私信 +1 778-877-9257，在新标签页打开"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.2h.7l.9 2.1-1.1 1.1a6.6 6.6 0 0 0 3.8 3.8l1.1-1.1 2.1.9v.7a1.1 1.1 0 0 1-1.1 1.1A8.6 8.6 0 0 1 3.2 4.3a1.1 1.1 0 0 1 1.1-1.1z"/></svg>WhatsApp</a>
             <a href="mailto:leofrank1017@gmail.com" aria-label="给 leofrank1017@gmail.com 发邮件"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.2" y="3.6" width="11.6" height="8.8" rx="1.4"/><path d="m3 4.8 5 3.7 5-3.7"/></svg>邮箱</a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="tight" id="founding" aria-labelledby="founding-title">
-      <div class="w">
-        <div class="slot">
-          <!-- 剩余名额只改 slots-left 里的数字 -->
-          <h2 id="founding-title">创始客户名额：剩 <span class="slots-left">5</span> 个</h2>
-          <p>前 5 位客户，搭建费半价，$150，<span class="keep">不是 $300</span>。</p>
-          <p>做完后写一段短评，讲你的真实体验。可以匿名，也可以用昵称。我们可能会放在这页上。</p>
-          <a class="btn p" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断</a>
         </div>
       </div>
     </section>
@@ -287,7 +276,7 @@
         <div class="band">
           <h2>先聊 15 分钟，<br class="mb">看适不适合你</h2>
           <div class="cta">
-            <a class="btn p" data-cta="BOOK_DIAGNOSIS" href="#book">预约 15 分钟免费诊断<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a class="btn p" data-cta="BOOK_DIAGNOSIS" href="#book">预约免费收款体检<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
             <a class="btn s" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
           </div>
         </div>
@@ -297,9 +286,9 @@
   <footer>
     <div class="w">
       <a class="brand" href="#main">UBook</a>
-      <p class="fine">UBook 不托管资金、不换汇、不接触私钥、不提供税务建议。</p>
+      <p class="fine">不代收资金、不换汇、不碰私钥、不提供税务建议，不接中国大陆客户。</p>
       <div class="fl">
-        <a data-cta="BOOK_DIAGNOSIS" href="#book">预约诊断</a>
+        <a data-cta="BOOK_DIAGNOSIS" href="#book">预约免费收款体检</a>
         <a data-cta="FREE_TEMPLATE" href="#book">收 U 模板</a>
         <span>© 2026 UBook</span>
       </div>

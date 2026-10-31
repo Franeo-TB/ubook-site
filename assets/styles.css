@@ -1405,10 +1405,6 @@ footer .reach {
   }
 }
 
-.keep {
-  white-space: nowrap;
-}
-
 .paylater {
   display: flex;
   align-items: center;
@@ -1473,63 +1469,73 @@ footer .reach {
   font-size: 15px;
 }
 
-.slot {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: var(--s4) var(--s3);
-  border-radius: 20px;
-  color: #e7ebf3;
+.keep {
+  white-space: nowrap;
+}
+
+.pack {
+  margin: var(--s3) 0 0;
+  color: var(--ink2);
+  font-size: 15px;
+}
+
+.pack a {
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.plan {
+  min-width: 0;
+}
+
+.plan h3 {
+  padding-right: 0;
+}
+
+.plan.featured {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 48%),
-    rgba(15, 26, 51, 0.94);
+    linear-gradient(165deg, rgba(255, 255, 255, 0.1), transparent 36%),
+    radial-gradient(110% 70% at 100% 0%, rgba(180, 67, 43, 0.28), transparent 55%),
+    #0f1a33;
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.16),
-    0 18px 40px -24px rgba(15, 26, 51, 0.6);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 24px 48px -18px rgba(15, 26, 51, 0.55),
+    0 48px 80px -36px rgba(15, 26, 51, 0.4);
 }
 
-.slot h2 {
+.plan.featured h3 {
+  padding-right: 52px;
+}
+
+.plan li span {
+  min-width: 0;
+}
+
+.plan li b {
+  margin-right: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+.plan.featured li b {
   color: #fff;
-  font-size: 26px;
-  line-height: 1.35;
 }
 
-.slot p {
-  margin-top: 12px;
-  color: #c9d0de;
-  font-size: 16px;
-}
+@media (min-width: 960px) {
+  .plans {
+    align-items: center;
+  }
 
-.slots-left {
-  font-weight: 700;
-}
-
-.slot .p {
-  margin-top: var(--s3);
-  background: #fff;
-  color: var(--ink);
-}
-
-.slot .p:hover {
-  background: #eef0f4;
-  color: var(--ink);
-}
-
-.slot :focus-visible {
-  outline-color: var(--ink);
-  box-shadow: 0 0 0 5px #fff;
-}
-
-@media (min-width: 720px) {
-  .slot h2 {
-    font-size: 32px;
+  .plan.featured {
+    padding: 40px var(--s4) 36px;
   }
 }
 
 @media (forced-colors: active) {
   .pledge,
-  .slot,
-  .slot .p {
+  .plan.featured {
     background: ButtonFace;
     color: ButtonText;
     box-shadow: none;
@@ -1537,9 +1543,11 @@ footer .reach {
   }
 
   .pledge-title,
-  .slot h2,
-  .slot p,
-  .paylater {
+  .paylater,
+  .plan.featured,
+  .plan.featured li,
+  .plan.featured li b,
+  .plan.featured h3 {
     color: ButtonText;
   }
 }

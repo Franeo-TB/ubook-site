@@ -1,7 +1,7 @@
 /**
  * UBook call-to-action links and the analytics token.
  * This is the only place these values are set.
- * BOOK_DIAGNOSIS — 预约免费收款体检
+ * BOOK_DIAGNOSIS — 预约 15 分钟免费体检
  * FREE_TEMPLATE — 免费领取稳定币收款模板
  * CF_BEACON_TOKEN — Cloudflare Web Analytics. Leave empty and nothing loads.
  */

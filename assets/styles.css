@@ -1427,6 +1427,10 @@ footer .reach {
   color: #7fd3b0;
 }
 
+.hero h1 {
+  white-space: normal;
+}
+
 .dream {
   max-width: 28em;
   margin: var(--s3) 0 0;
@@ -1434,6 +1438,25 @@ footer .reach {
   font-size: 17px;
   font-weight: 600;
   line-height: 1.55;
+}
+
+.nudge {
+  flex-basis: 100%;
+  margin: 4px 0 0;
+  color: #c3cadb;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#pains .btn {
+  margin-top: var(--s4);
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  height: auto;
+  min-height: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .textlink {

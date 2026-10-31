@@ -53,6 +53,7 @@
           <p class="loc"><i aria-hidden="true"></i>服务地区：香港、台湾、新加坡、马来西亚、日本、北美、欧洲</p>
           <h1 id="hero-title">放心收 U，<br>月底的账<br class="mb">也一清二楚</h1>
           <p class="lead">给海外华人自由职业者和小团队。我们陪你把 USDT/USDC 收款和对账搭好。钱始终在你自己的钱包里。</p>
+          <p class="dream">从今天起，海外客户付稳定币不用你再教一遍；月底 10 分钟对完账。</p>
           <div class="cta" id="book">
             <a class="btn p" data-cta="BOOK_DIAGNOSIS" href="#book">预约免费收款体检<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
             <a class="btn s" data-cta="FREE_TEMPLATE" href="#book">免费领取收 U 模板</a>
@@ -186,6 +187,18 @@
           <p class="ey">价格</p>
           <h2 id="pricing-title">稳定币收款<span class="keep">不丢钱</span>，每一笔都对得上</h2>
         </div>
+        <!-- 60 秒演示：只改 DEMO_SRC。留空则播放器不出现。 -->
+        <video class="demo" data-demo hidden controls playsinline preload="none" aria-label="60 秒演示：一笔测试转账，并记进对账表"></video>
+        <script>
+          (function () {
+            var DEMO_SRC = "";
+            if (!DEMO_SRC) return;
+            var video = document.currentScript.previousElementSibling;
+            if (!video || video.tagName !== "VIDEO") return;
+            video.src = DEMO_SRC;
+            video.hidden = false;
+          })();
+        </script>
         <div class="plans">
           <article class="plan">
             <h3>免费 · 收款体检（15 分钟）</h3>
@@ -196,19 +209,22 @@
           </article>
           <article class="plan featured">
             <span class="tag">主推</span>
-            <h3>稳定币收款<span class="keep">不丢钱</span> 当天上线包</h3>
-            <p class="price">$300</p>
-            <p class="unit">一次性</p>
-            <a class="btn p full" data-cta="BOOK_DIAGNOSIS" href="#book">预约免费收款体检</a>
-            <ul>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>诊断 + 1–2 小时一对一配置</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>选好一条链和一种主币，用你自己的钱包</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>发票模板标明网络，附中英文付款说明</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>小额测试转账</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>对账表配好</li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg><span><b>赠品</b>收入记录导出模板 + 首月一次对账检查</span></li>
-              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg><span><b>保证</b>当天配好、当天测试收款，确认能收到再付钱。</span></li>
+            <h3>稳定币收款当天上线包：当天收到第一笔，月底账一次对清</h3>
+            <ul class="stack">
+              <li><span>一对一配置和当天测试收款</span><b>$300</b></li>
+              <li><span>标明网络的发票模板</span><b>$50</b></li>
+              <li><span>中英文付款说明</span><b>$50</b></li>
+              <li><span>对账表和填写方法</span><b>$100</b></li>
+              <li><span>收入记录导出模板</span><b>$150</b></li>
+              <li><span>首月一次对账检查</span><b>$100</b></li>
             </ul>
+            <p class="was"><span>参考总价值</span> <s>$750</s></p>
+            <p class="refnote">以上为单项参考价值，不是过往成交价。</p>
+            <p class="price">$300</p>
+            <p class="unit">正价</p>
+            <p class="deal"><span>创始名额</span> <b>$150</b> <span>换一段真实评价</span></p>
+            <a class="btn p full" data-cta="BOOK_DIAGNOSIS" href="#book">预约免费收款体检</a>
+            <p class="assure">当天配好、当天测试收款，确认能收到再付钱</p>
           </article>
           <article class="plan">
             <h3>$150 / 月 · 每月对账</h3>

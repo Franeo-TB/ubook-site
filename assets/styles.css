@@ -1432,6 +1432,84 @@ footer .reach {
   line-height: 1.55;
 }
 
+.textlink {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  min-height: 44px;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.hero .textlink,
+.band .textlink {
+  color: #fff;
+}
+
+.pains {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--s2);
+}
+
+.pains li {
+  margin: 0;
+  padding: var(--s3);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  font-size: 16px;
+}
+
+.about-copy {
+  max-width: 40em;
+  margin-top: var(--s2);
+  color: var(--ink2);
+  font-size: 17px;
+}
+
+#about .reach {
+  margin-top: var(--s4);
+}
+
+.legal {
+  max-width: 42em;
+}
+
+.legal h1 {
+  font-size: 32px;
+  white-space: normal;
+}
+
+.legal h2 {
+  margin-top: var(--s6);
+  font-size: 22px;
+}
+
+.legal p,
+.legal li {
+  margin-top: var(--s2);
+  color: var(--ink2);
+}
+
+.legal ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+@media (min-width: 960px) {
+  .pains {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s3);
+  }
+
+  .legal h1 {
+    font-size: 44px;
+  }
+}
+
 .demo {
   grid-column: 1 / -1;
   width: 100%;

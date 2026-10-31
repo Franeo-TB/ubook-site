@@ -1167,6 +1167,10 @@ br.mb {
     align-items: center;
   }
 
+  footer .w.guide {
+    flex-direction: column;
+  }
+
   br.mb {
     display: none;
   }
@@ -1742,4 +1746,31 @@ footer .reach {
   .slot p {
     color: ButtonText;
   }
+}
+
+.faq summary h3 {
+  flex: 1;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.guides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.guides li {
+  color: var(--mut);
+  font-size: 13px;
+}
+
+footer .w.guide {
+  align-items: flex-start;
 }

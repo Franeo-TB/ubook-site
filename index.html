@@ -3,26 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UBook｜稳定币收款搭建与对账</title>
-  <meta name="description" content="给海外华人自由职业者和小团队。我们陪你把稳定币收款和对账搭好。钱始终在你自己的钱包里。服务地区：香港、台湾、新加坡、马来西亚、日本、北美、欧洲。">
+  <title>稳定币（USDT/USDC）收款与对账，当天上线｜海外自由职业者｜UBook</title>
+  <meta name="description" content="自由职业者怎么安全收 USDT？UBook 帮海外华人自由职业者和小团队当天配好稳定币收款：只用一条链，用你自己的钱包，发票标明网络，再配一份对账表。确认能收到再付钱。">
+  <link rel="canonical" href="https://ubookpay.com/">
   <meta name="theme-color" content="#FAFAF8">
   <meta name="color-scheme" content="light">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <!-- CTA 链接只在 assets/cta.js 修改：BOOK_DIAGNOSIS（预约免费收款体检）、FREE_TEMPLATE（免费领取稳定币收款模板）。统计令牌也只在那里：CF_BEACON_TOKEN。 -->
-  <meta property="og:title" content="UBook｜稳定币收款搭建与对账">
-  <meta property="og:description" content="给海外华人自由职业者和小团队。我们陪你把稳定币收款和对账搭好。钱始终在你自己的钱包里。服务地区：香港、台湾、新加坡、马来西亚、日本、北美、欧洲。">
+  <meta property="og:title" content="稳定币（USDT/USDC）收款与对账，当天上线｜海外自由职业者｜UBook">
+  <meta property="og:description" content="自由职业者怎么安全收 USDT？UBook 帮海外华人自由职业者和小团队当天配好稳定币收款：只用一条链，用你自己的钱包，发票标明网络，再配一份对账表。确认能收到再付钱。">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_Hans">
   <meta property="og:site_name" content="UBook">
-  <meta property="og:image" content="assets/og.png">
+  <meta property="og:image" content="https://ubookpay.com/assets/og.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="UBook：放心收稳定币，月底的账也一清二楚">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="UBook｜稳定币收款搭建与对账">
-  <meta name="twitter:description" content="给海外华人自由职业者和小团队。我们陪你把稳定币收款和对账搭好。钱始终在你自己的钱包里。">
-  <meta name="twitter:image" content="assets/og.png">
+  <meta name="twitter:title" content="稳定币（USDT/USDC）收款与对账，当天上线｜海外自由职业者｜UBook">
+  <meta name="twitter:description" content="自由职业者怎么安全收 USDT？UBook 帮海外华人自由职业者和小团队当天配好稳定币收款：只用一条链，用你自己的钱包，发票标明网络，再配一份对账表。确认能收到再付钱。">
+  <meta name="twitter:image" content="https://ubookpay.com/assets/og.png">
   <meta name="twitter:image:alt" content="UBook：放心收稳定币，月底的账也一清二楚">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
@@ -32,6 +33,133 @@
   <link rel="preload" href="assets/fonts/noto-sans-sc-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/cta.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ubookpay.com/#organization",
+      "name": "UBook",
+      "url": "https://ubookpay.com/",
+      "logo": "https://ubookpay.com/assets/og.png",
+      "sameAs": [
+        "https://x.com/Zhoumancang",
+        "https://t.me/Fontinz"
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "稳定币收款搭建与对账",
+      "provider": {
+        "@id": "https://ubookpay.com/#organization"
+      },
+      "areaServed": [
+        "HK",
+        "TW",
+        "SG",
+        "MY",
+        "JP",
+        "北美",
+        "欧洲"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "免费 15 分钟收款体检加模板包",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "稳定币收款当天上线包",
+          "price": "300",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "每月对账",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "150",
+            "priceCurrency": "USD",
+            "billingDuration": "P1M"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "自由职业者怎么收 USDT？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "先选定一条链，用自己的钱包地址收款，并把地址和网络一起写在发票上。第一次合作时，让客户先转一笔小额测试款，确认到账后再付全款。每笔到账都记进对账表，写上日期、发票号、金额和交易哈希。UBook 会当天帮你把这套流程配好。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "USDT 打错链了怎么办？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不一定会丢，关键看收款地址在那条链上是不是由你自己控制。如果你用的是自托管钱包，而对方把钱转到了另一条兼容的链（比如同一个 0x 地址的另一条 EVM 链），在钱包里切换到那条网络，通常就能看到并取回。如果转到的是交易所充值地址，而交易所不支持那条网络，只能联系交易所客服，不保证能找回。最有效的办法是提前预防：只用一条链，发票上写明网络，先转一笔小额测试。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "TRC20 和 ERC20 选哪个？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "选你的客户最常用、手续费你们都能接受的那一条，并且只用它。一般来说，TRC20 的转账费用比 ERC20 低；ERC20 在以太坊上，gas 费会随网络拥堵程度变化。两条链的地址格式不同，发票上一定要写清楚是哪条。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "客户付款时不写备注，怎么对上发票？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "普通的 USDT 链上转账本来就带不了备注，所以要靠金额、时间和付款地址来对应。常见做法是给每张发票设一个独一无二的金额，比如在金额末尾加几分钱的尾数当识别码；再记下客户常用的付款地址。对账表里留一列交易哈希，在区块浏览器上就能逐笔核对。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "你们会经手我的钱吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不会。客户的款项直接付到你自己的钱包，UBook 不代收、不托管、不换汇。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "需要把私钥或助记词给你们吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不需要，也请不要给任何人。配置时凡是涉及私钥的步骤，都由你本人操作。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "要先付钱吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不用。我们当天帮你配好，当天用一笔小额测试款确认能收到，之后你再付搭建费。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "对账表算税务建议吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不算。我们只是把链上交易整理成表格，怎么报税请问你的会计师。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
   <a class="skip" href="#main">跳到主要内容</a>
@@ -52,7 +180,7 @@
         <div class="copy">
           <p class="loc"><i aria-hidden="true"></i>服务地区：香港、台湾、新加坡、马来西亚、日本、北美、欧洲</p>
           <h1 id="hero-title">放心收稳定币，<br>月底的账<br class="mb">也一清二楚</h1>
-          <p class="lead">给海外华人自由职业者和小团队。我们陪你把稳定币（如 USDT、USDC）收款和对账搭好。钱始终在你自己的钱包里。</p>
+          <p class="lead">钱始终在你自己的钱包里。</p>
           <p class="dream">从今天起，海外客户付稳定币不用你再教一遍；月底 10 分钟对完账。</p>
           <div class="cta" id="book">
             <a class="btn p" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约免费收款体检<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
@@ -113,6 +241,13 @@
             <p class="sum"><span>本月已到账</span><b>2,450 USDT</b></p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="what-title">
+      <div class="w">
+        <h2 id="what-title">UBook 是什么</h2>
+        <p>UBook 是一项稳定币收款搭建服务，帮海外华人自由职业者和小团队当天配好 USDT/USDC 收款：只用一条链，用客户自己的钱包，发票上标明网络，再配一份对账表。UBook 不代收、不换汇、不碰私钥。服务香港、台湾、新加坡、马来西亚、日本、北美和欧洲。</p>
       </div>
     </section>
 
@@ -297,23 +432,43 @@
         </div>
         <div class="faq">
           <details open>
-            <summary>你们会经手我的钱吗？<i class="mark" aria-hidden="true"></i></summary>
-            <p>不会。客户直接付到你自己的钱包，我们看不到也动不了。</p>
+            <summary><h3>自由职业者怎么收 USDT？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>先选定一条链，用自己的钱包地址收款，并把地址和网络一起写在发票上。第一次合作时，让客户先转一笔小额测试款，确认到账后再付全款。每笔到账都记进对账表，写上日期、发票号、金额和交易哈希。UBook 会当天帮你把这套流程配好。</p>
           </details>
           <details>
-            <summary>需要给你们私钥或助记词吗？<i class="mark" aria-hidden="true"></i></summary>
-            <p>不需要，也请不要给任何人。屏幕共享时涉及私钥的步骤由你自己操作。</p>
+            <summary><h3>USDT 打错链了怎么办？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>不一定会丢，关键看收款地址在那条链上是不是由你自己控制。如果你用的是自托管钱包，而对方把钱转到了另一条兼容的链（比如同一个 0x 地址的另一条 EVM 链），在钱包里切换到那条网络，通常就能看到并取回。如果转到的是交易所充值地址，而交易所不支持那条网络，只能联系交易所客服，不保证能找回。最有效的办法是提前预防：只用一条链，发票上写明网络，先转一笔小额测试。</p>
           </details>
           <details>
-            <summary>为什么只用一条链？<i class="mark" aria-hidden="true"></i></summary>
+            <summary><h3>TRC20 和 ERC20 选哪个？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>选你的客户最常用、手续费你们都能接受的那一条，并且只用它。一般来说，TRC20 的转账费用比 ERC20 低；ERC20 在以太坊上，gas 费会随网络拥堵程度变化。两条链的地址格式不同，发票上一定要写清楚是哪条。</p>
+          </details>
+          <details>
+            <summary><h3>客户付款时不写备注，怎么对上发票？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>普通的 USDT 链上转账本来就带不了备注，所以要靠金额、时间和付款地址来对应。常见做法是给每张发票设一个独一无二的金额，比如在金额末尾加几分钱的尾数当识别码；再记下客户常用的付款地址。对账表里留一列交易哈希，在区块浏览器上就能逐笔核对。</p>
+          </details>
+          <details>
+            <summary><h3>你们会经手我的钱吗？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>不会。客户的款项直接付到你自己的钱包，UBook 不代收、不托管、不换汇。</p>
+          </details>
+          <details>
+            <summary><h3>需要把私钥或助记词给你们吗？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>不需要，也请不要给任何人。配置时凡是涉及私钥的步骤，都由你本人操作。</p>
+          </details>
+          <details>
+            <summary><h3>要先付钱吗？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>不用。我们当天帮你配好，当天用一笔小额测试款确认能收到，之后你再付搭建费。</p>
+          </details>
+          <details>
+            <summary><h3>对账表算税务建议吗？</h3><i class="mark" aria-hidden="true"></i></summary>
+            <p>不算。我们只是把链上交易整理成表格，怎么报税请问你的会计师。</p>
+          </details>
+          <details>
+            <summary><h3>为什么只用一条链？</h3><i class="mark" aria-hidden="true"></i></summary>
             <p>链越多，客户越容易转错。固定一条，发票上写清楚，出错的机会少很多。</p>
           </details>
           <details>
-            <summary>报税导出算税务建议吗？<i class="mark" aria-hidden="true"></i></summary>
-            <p>不算。我们只把交易整理成表格，怎么报税请问你的会计师。</p>
-          </details>
-          <details>
-            <summary>服务哪些地区？<i class="mark" aria-hidden="true"></i></summary>
+            <summary><h3>服务哪些地区？</h3><i class="mark" aria-hidden="true"></i></summary>
             <p>服务地区：香港、台湾、新加坡、马来西亚、日本、北美、欧洲。</p>
           </details>
         </div>
@@ -333,6 +488,13 @@
     </div>
   </main>
   <footer>
+    <div class="w guide">
+      <p class="fine">稳定币收款指南</p>
+      <ul class="guides">
+        <li>《USDT 收款怎么对账》 <span>即将上线</span></li>
+        <li>《USDT 转错链怎么办》 <span>即将上线</span></li>
+      </ul>
+    </div>
     <div class="w">
       <a class="brand" href="#main">UBook</a>
       <p class="fine">不代收资金、不换汇、不碰私钥、不提供税务建议。</p>

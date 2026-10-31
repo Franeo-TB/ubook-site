@@ -1440,12 +1440,21 @@ footer .reach {
   line-height: 1.55;
 }
 
+#book.cta {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
 .nudge {
-  flex-basis: 100%;
-  margin: 4px 0 0;
+  margin: 6px 0 0;
   color: #c3cadb;
   font-size: 13px;
   line-height: 1.5;
+}
+
+#book .textlink {
+  margin-top: 10px;
 }
 
 #pains .btn {

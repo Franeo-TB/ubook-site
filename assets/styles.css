@@ -1548,20 +1548,21 @@ footer .reach {
   justify-content: space-between;
   gap: 8px;
   margin: var(--s3) 0 0;
-  color: #9aa3b5;
-  font-size: 14px;
+  color: #b4bccc;
+  font-size: 16px;
 }
 
 .was s {
-  color: #9aa3b5;
+  color: #b4bccc;
+  font-size: 16px;
   text-decoration: line-through;
 }
 
 .refnote {
-  margin: 6px 0 0;
-  color: #9aa3b5;
-  font-size: 12px;
-  line-height: 1.5;
+  margin: 8px 0 0;
+  color: #b4bccc;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .deal {
@@ -1630,8 +1631,14 @@ footer .reach {
     0 48px 80px -36px rgba(15, 26, 51, 0.4);
 }
 
+.plan.featured .tag {
+  position: static;
+  float: right;
+  margin: 0 0 8px 16px;
+}
+
 .plan.featured h3 {
-  padding-right: 52px;
+  padding-right: 0;
 }
 
 .plan li span {
@@ -1704,7 +1711,7 @@ footer .reach {
 
 @media (min-width: 960px) {
   .plans {
-    align-items: stretch;
+    align-items: start;
   }
 
   .plan h3 {

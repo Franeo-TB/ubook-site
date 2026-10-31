@@ -1447,7 +1447,7 @@ footer .reach {
 }
 
 .nudge {
-  margin: 6px 0 0;
+  margin: 12px 0 0;
   color: #c3cadb;
   font-size: 13px;
   line-height: 1.5;
@@ -1508,6 +1508,19 @@ footer .reach {
 
 #about .reach {
   margin-top: var(--s4);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+@media (max-width: 959px) {
+  #about .reach a {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0 10px;
+  }
 }
 
 .legal {

@@ -1,6 +1,6 @@
 # UBook
 
-Static marketing site for UBook: USDT/USDC setup and monthly reconciliation for overseas Chinese freelancers and small teams in Hong Kong, Taiwan, Singapore, and Malaysia. Funds stay in the client’s own wallet.
+Static marketing site for UBook: USDT/USDC setup and monthly reconciliation for overseas Chinese freelancers and small teams in Hong Kong, Taiwan, Singapore, Malaysia, Japan, North America, and Europe. Funds stay in the client’s own wallet.
 
 Publish the repository root as-is on Vercel, Netlify, or Cloudflare Pages. There is no build step.
 

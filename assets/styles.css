@@ -1475,6 +1475,59 @@ footer .reach {
   color: #fff;
 }
 
+.slot {
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--s4) var(--s3);
+  border-radius: 20px;
+  color: #e7ebf3;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 48%),
+    rgba(15, 26, 51, 0.94);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 18px 40px -24px rgba(15, 26, 51, 0.6);
+}
+
+.slot h2 {
+  color: #fff;
+  font-size: 26px;
+  line-height: 1.35;
+}
+
+.slot p {
+  margin-top: 12px;
+  color: #c9d0de;
+  font-size: 16px;
+}
+
+.slots-left {
+  font-weight: 700;
+}
+
+.slot .p {
+  margin-top: var(--s3);
+  background: #fff;
+  color: var(--ink);
+}
+
+.slot .p:hover {
+  background: #eef0f4;
+  color: var(--ink);
+}
+
+.slot :focus-visible {
+  outline-color: var(--ink);
+  box-shadow: 0 0 0 5px #fff;
+}
+
+@media (min-width: 720px) {
+  .slot h2 {
+    font-size: 32px;
+  }
+}
+
 @media (min-width: 960px) {
   .plans {
     align-items: stretch;
@@ -1490,7 +1543,9 @@ footer .reach {
 }
 
 @media (forced-colors: active) {
-  .plan.featured {
+  .plan.featured,
+  .slot,
+  .slot .p {
     background: ButtonFace;
     color: ButtonText;
     box-shadow: none;
@@ -1501,7 +1556,9 @@ footer .reach {
   .plan.featured,
   .plan.featured li,
   .plan.featured li b,
-  .plan.featured h3 {
+  .plan.featured h3,
+  .slot h2,
+  .slot p {
     color: ButtonText;
   }
 }

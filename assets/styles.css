@@ -2467,8 +2467,9 @@ footer .w.guide {
 
 .quiz .hint {
   margin: 0;
-  color: var(--mut);
+  color: #3b4558;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 .quiz [hidden] {
@@ -2485,6 +2486,10 @@ footer .w.guide {
 
 .quiz .result h2 {
   font-size: 32px;
+}
+
+.quiz #miss-title {
+  margin-top: 14px;
 }
 
 .quiz .acts {

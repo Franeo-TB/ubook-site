@@ -2619,3 +2619,21 @@ footer .w.guide {
   margin-top: 4px;
   color: var(--ink2);
 }
+
+#faq.tight {
+  padding-bottom: 48px;
+}
+
+section[aria-labelledby="fit-title"] {
+  padding-top: 48px;
+}
+
+@media (min-width: 960px) {
+  #faq.tight {
+    padding-bottom: 64px;
+  }
+
+  section[aria-labelledby="fit-title"] {
+    padding-top: 64px;
+  }
+}

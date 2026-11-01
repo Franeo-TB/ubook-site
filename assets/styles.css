@@ -1485,11 +1485,6 @@ footer .reach {
   color: var(--ok);
 }
 
-.quiet .checkin {
-  color: var(--ink);
-  font-weight: 600;
-}
-
 #book.cta {
   flex-direction: column;
   align-items: flex-start;
@@ -1525,7 +1520,7 @@ footer .reach {
   flex-wrap: wrap;
   align-items: center;
   gap: 0 16px;
-  margin-top: 2px;
+  margin-top: 10px;
 }
 
 #book .hero-links .textlink,

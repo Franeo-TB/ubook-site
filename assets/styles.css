@@ -1819,11 +1819,13 @@ footer .reach {
 .short { display: none; }
 
 .locbar {
-  margin: 0;
-  padding: 6px 24px 8px;
-  color: var(--mut);
-  font-size: 12px;
+  margin: 0 0 18px;
+  padding: 0;
+  color: #c3cadb;
+  font-size: 13px;
+  line-height: 1.5;
   letter-spacing: 0.01em;
+  background: none;
 }
 
 .hero h1 {
@@ -1851,11 +1853,11 @@ footer .reach {
 }
 
 .hero::before {
-  inset: auto 0 0 auto;
-  top: 10%;
-  width: 70%;
-  height: 80%;
-  background: radial-gradient(closest-side at 70% 45%, rgba(180, 67, 43, 0.42), transparent 72%);
+  inset: auto -8% auto auto;
+  top: -6%;
+  width: 46%;
+  height: 58%;
+  background: radial-gradient(closest-side at 62% 42%, rgba(180, 67, 43, 0.16), transparent 72%);
   filter: none;
   opacity: 1;
   mix-blend-mode: normal;
@@ -1880,28 +1882,6 @@ footer .reach {
 .vis::before,
 .vis::after {
   content: none;
-}
-
-.tx {
-  position: relative;
-  z-index: 0;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin: 0 8% 0 4%;
-  padding: 8px 12px;
-  border-radius: 12px;
-  color: #d7deee;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  font: 500 12px/1.4 ui-monospace, "SF Mono", Menlo, monospace;
-}
-
-.tx span {
-  font-family: Inter, "Noto Sans SC", sans-serif;
-  font-weight: 600;
 }
 
 .inv,
@@ -2010,6 +1990,12 @@ footer .reach {
   .hero {
     padding-bottom: 12px;
   }
+  .hero::before {
+    top: 22%;
+    width: 38%;
+    height: 32%;
+    background: radial-gradient(closest-side at 70% 50%, rgba(180, 67, 43, 0.1), transparent 70%);
+  }
   .vis {
     margin-top: 4px;
     transform: scale(0.85);
@@ -2027,10 +2013,6 @@ footer .reach {
   }
   .vis {
     grid-column: 8 / 13;
-  }
-  .join {
-    left: 18%;
-    top: 28%;
   }
 }
 
@@ -2053,15 +2035,19 @@ footer .w.guide {
 
 .join {
   position: relative;
-  z-index: 4;
-  justify-self: center;
-  margin: -12px 0;
+  z-index: 5;
+  justify-self: end;
+  width: max-content;
+  max-width: calc(100% - 24px);
+  margin: -18px 16px -6px auto;
   padding: 6px 12px;
   border-radius: 999px;
   background: #fff;
   color: var(--ink);
   font: 600 13px/1.4 Inter, "Noto Sans SC", sans-serif;
-  box-shadow: 0 8px 24px -12px rgba(15, 26, 51, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(15, 26, 51, 0.06),
+    0 10px 24px -12px rgba(15, 26, 51, 0.45);
 }
 
 .inv { z-index: 3; }
@@ -2175,16 +2161,37 @@ footer .w.guide {
   .dock { display: none; }
   .flow { grid-template-columns: repeat(3, 1fr); }
   .fit { grid-template-columns: 1fr 1fr; }
-  .inv { z-index: 3; }
-  .rec { z-index: 1; }
+  .vis { height: 722px; }
+  .inv {
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 352px;
+  }
+  .rec {
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    width: 420px;
+  }
   .join {
     position: absolute;
-    left: 34%;
-    top: 42%;
+    z-index: 5;
+    left: 248px;
+    top: 348px;
+    right: auto;
+    bottom: auto;
     margin: 0;
   }
 }
 
 @media (max-width: 959px) {
   body.has-dock { padding-bottom: 84px; }
+  .vis .rec { margin-top: 0; }
+  .hero::before {
+    top: 62%;
+    width: 42%;
+    height: 22%;
+    background: radial-gradient(closest-side at 72% 50%, rgba(180, 67, 43, 0.11), transparent 70%);
+  }
 }

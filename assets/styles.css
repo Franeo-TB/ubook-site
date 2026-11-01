@@ -2092,7 +2092,6 @@ main > section:not(.hero):not(.how) {
 
 .amt,
 .price,
-.sample td,
 .rec td {
   font-variant-numeric: tabular-nums;
 }
@@ -2287,29 +2286,6 @@ footer .w.guide {
 .fit p {
   margin-top: var(--s2);
   color: var(--ink2);
-}
-
-.sample {
-  margin: var(--s4) 0 0;
-  max-width: 520px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.sample figcaption {
-  padding: 12px 16px;
-  font-weight: 600;
-}
-
-.sample table {
-  font-size: 14px;
-}
-
-.sample th,
-.sample td {
-  padding: 10px 16px;
 }
 
 .plan.featured {
@@ -2642,4 +2618,22 @@ footer .w.guide {
   display: block;
   margin-top: 4px;
   color: var(--ink2);
+}
+
+#faq.tight {
+  padding-bottom: 48px;
+}
+
+section[aria-labelledby="fit-title"] {
+  padding-top: 48px;
+}
+
+@media (min-width: 960px) {
+  #faq.tight {
+    padding-bottom: 64px;
+  }
+
+  section[aria-labelledby="fit-title"] {
+    padding-top: 64px;
+  }
 }

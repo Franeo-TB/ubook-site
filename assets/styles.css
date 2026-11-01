@@ -1876,27 +1876,27 @@ footer .reach {
 .hero::after {
   content: "";
   position: absolute;
-  left: -40%;
-  right: -40%;
-  bottom: 0;
-  top: auto;
-  height: 64%;
+  left: -30%;
+  right: -30%;
+  top: 28vh;
+  bottom: auto;
+  height: 64vh;
   z-index: -2;
   opacity: 1;
   pointer-events: none;
-  transform: perspective(560px) rotateX(63deg);
+  transform: perspective(480px) rotateX(68deg);
   transform-origin: 50% 100%;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 64px 64px;
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 72px 72px;
   background-position: center bottom;
   -webkit-mask-image:
-    linear-gradient(to top, #000 0%, transparent 84%),
-    linear-gradient(to right, transparent 0%, #000 16%, #000 84%, transparent 100%);
+    linear-gradient(to top, #000 0%, #000 28%, transparent 90%),
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
   mask-image:
-    linear-gradient(to top, #000 0%, transparent 84%),
-    linear-gradient(to right, transparent 0%, #000 16%, #000 84%, transparent 100%);
+    linear-gradient(to top, #000 0%, #000 28%, transparent 90%),
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
 }
@@ -1916,20 +1916,33 @@ footer .reach {
 }
 
 .vis::before {
-  top: -28px;
-  left: -22px;
+  top: 0;
+  left: 0;
   width: 78%;
-  height: 42%;
-  transform: rotate(-5deg) translateZ(-70px);
+  height: 62%;
+  transform: rotateX(calc(7deg + var(--tx))) rotateY(calc(-9deg + var(--ty))) translateZ(-120px);
 }
 
 .vis::after {
-  right: -18px;
-  bottom: 18px;
-  width: 72%;
-  height: 34%;
-  opacity: 0.85;
-  transform: rotate(4deg) translateZ(-36px);
+  right: 0;
+  bottom: 0;
+  width: 86%;
+  height: 58%;
+  opacity: 1;
+  transform: rotateX(calc(7deg + var(--tx))) rotateY(calc(-9deg + var(--ty))) translateZ(-170px);
+}
+
+.cast {
+  position: absolute;
+  z-index: 0;
+  left: 14%;
+  right: 8%;
+  bottom: -36px;
+  height: 54px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 45%, rgba(0, 0, 0, 0.78), transparent 70%);
+  filter: blur(7px);
 }
 
 main > section:not(.hero):not(.how) {
@@ -1961,14 +1974,25 @@ main > section:not(.hero):not(.how) {
 .vis {
   --tx: 0deg;
   --ty: 0deg;
+  perspective: 980px;
+  perspective-origin: 58% 40%;
+  transform-style: preserve-3d;
+}
+
+.inv,
+.rec,
+.vis::before,
+.vis::after {
+  transform-style: preserve-3d;
+  transform-origin: center center;
 }
 
 .inv {
-  transform: rotateX(calc(2deg + var(--tx))) rotateY(calc(-3deg + var(--ty)));
+  transform: rotateX(calc(7deg + var(--tx))) rotateY(calc(-9deg + var(--ty))) translateZ(46px);
 }
 
 .rec {
-  transform: rotateX(calc(2deg + var(--tx))) rotateY(calc(-3deg + var(--ty)));
+  transform: rotateX(calc(7deg + var(--tx))) rotateY(calc(-9deg + var(--ty))) translateZ(-32px);
 }
 
 .amt,
@@ -2046,10 +2070,10 @@ main > section:not(.hero):not(.how) {
     padding-bottom: 12px;
   }
   .vis {
-    margin-top: 4px;
-    transform: scale(0.85);
+    margin-top: 8px;
+    transform: scale(0.92);
     transform-origin: top center;
-    margin-bottom: -70px;
+    margin-bottom: -28px;
   }
   footer .w.guide {
     margin-bottom: 28px;
@@ -2210,77 +2234,86 @@ footer .w.guide {
   .dock { display: none; }
   .flow { grid-template-columns: repeat(3, 1fr); }
   .fit { grid-template-columns: 1fr 1fr; }
-  .vis { height: 722px; }
+  .hero { padding-bottom: 40px; }
+  .vis { height: 700px; }
   .inv {
     z-index: 3;
     top: 0;
     left: 0;
-    width: 352px;
+    width: 340px;
   }
   .rec {
     z-index: 1;
     right: 0;
-    bottom: 0;
-    width: 420px;
+    top: 358px;
+    bottom: auto;
+    width: 400px;
   }
   .join {
     position: absolute;
     z-index: 5;
-    left: 248px;
-    top: 348px;
+    left: 168px;
+    top: 330px;
     right: auto;
     bottom: auto;
     margin: 0;
   }
   .locbar {
     font-size: 15px;
-    font-weight: 500;
-    color: #e8eef8;
+    font-weight: 400;
+    color: #b3bfd2;
+  }
+  .vis::before {
+    top: -12px;
+    left: -8px;
+    width: 372px;
+    height: 400px;
+  }
+  .vis::after {
+    right: 0;
+    bottom: 6px;
+    width: 424px;
+    height: 390px;
   }
   .hero .nudge {
     font-size: 15px;
     font-weight: 500;
     color: #e8eef8;
   }
-  .vis::before {
-    top: -22px;
-    left: -18px;
-    width: 300px;
-    height: 250px;
-  }
-  .vis::after {
-    right: -8px;
-    bottom: 28px;
-    width: 340px;
-    height: 210px;
-  }
 }
 
 @media (max-width: 959px) {
   body.has-dock { padding-bottom: 84px; }
-  .vis .rec { margin-top: 0; }
+  .hero { padding-top: 20px; }
+  .vis {
+    transform: scale(0.8);
+    margin-bottom: -64px;
+  }
+  .join { margin: -14px 18px 12px auto; }
+  .vis .rec { margin-top: 8px; }
   .hero {
     background:
-      radial-gradient(78% 26% at 78% 64%, rgba(180, 67, 43, 0.11), transparent 70%),
-      radial-gradient(90% 28% at 0% 100%, rgba(72, 112, 204, 0.1), transparent 72%),
+      radial-gradient(78% 26% at 78% 72%, rgba(180, 67, 43, 0.09), transparent 74%),
+      radial-gradient(90% 28% at 0% 100%, rgba(72, 112, 204, 0.08), transparent 74%),
       linear-gradient(180deg, #0c1529 0%, #0e1730 56%, #121c38 100%);
   }
   .hero::after {
-    height: 42%;
-    background-size: 48px 48px;
+    top: 48vh;
+    height: 48vh;
+    background-size: 44px 44px;
   }
   .vis::before {
-    top: -18px;
-    left: -14px;
-    width: 74%;
-    height: 30%;
-    transform: rotate(-4deg) translateZ(-40px);
+    top: 0;
+    left: 2%;
+    width: 92%;
+    height: 48%;
+    transform: rotateX(calc(7deg + var(--tx))) rotateY(calc(-9deg + var(--ty))) translateZ(-90px);
   }
   .vis::after {
-    right: -12px;
-    bottom: 10px;
-    width: 72%;
-    height: 20%;
-    transform: rotate(3deg) translateZ(-24px);
+    right: 0;
+    bottom: 0;
+    width: 96%;
+    height: 46%;
+    transform: rotateX(calc(7deg + var(--tx))) rotateY(calc(-9deg + var(--ty))) translateZ(-130px);
   }
 }

@@ -98,7 +98,6 @@ summary,
 .unit,
 .for,
 .note,
-.addr,
 .sub,
 .lead {
   text-wrap: pretty;
@@ -453,30 +452,6 @@ h1 {
   border-radius: 10px;
   color: var(--ink);
   background: #fff;
-}
-
-.addr {
-  font-size: 12px;
-  color: var(--mut);
-  line-height: 1.6;
-  min-width: 0;
-}
-
-.addr code {
-  display: block;
-  font: 500 14px/1.5 ui-monospace, "SF Mono", Menlo, monospace;
-  color: var(--ink);
-  margin: 2px 0 var(--s1);
-}
-
-.copyb {
-  display: inline-flex;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--ink);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 2px 8px;
 }
 
 .note {
@@ -1469,8 +1444,50 @@ footer .reach {
   max-width: none;
 }
 
-.hero .dream span {
+.hero .dream span,
+.quiet .dream span {
   white-space: nowrap;
+}
+
+.quiet {
+  padding: 20px 0 4px;
+  color: var(--ink2);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.quiet p {
+  max-width: 40em;
+}
+
+.quiet p + p {
+  margin-top: 8px;
+}
+
+.quiet .locbar {
+  margin: 0 0 8px;
+  color: var(--mut);
+}
+
+.quiet .dream {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.quiet .reassure {
+  margin-top: 8px;
+  color: var(--ink2);
+}
+
+.quiet .okmark {
+  color: var(--ok);
+}
+
+.quiet .checkin {
+  color: var(--ink);
+  font-weight: 600;
 }
 
 #book.cta {

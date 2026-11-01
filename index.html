@@ -77,13 +77,7 @@
         },
         {
           "@type": "Offer",
-          "name": "每月对账",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "150",
-            "priceCurrency": "USD",
-            "billingDuration": "P1M"
-          }
+          "name": "每月对账"
         }
       ]
     },
@@ -153,6 +147,22 @@
             "@type": "Answer",
             "text": "不算。我们只是把链上交易整理成表格，怎么报税请问你的会计师。"
           }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么只用一条链？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "链越多，客户越容易转错。固定一条，发票上写清楚，出错的机会少很多。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "服务哪些地区？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "服务地区：香港、台湾、新加坡、日本、北美、欧洲。"
+          }
         }
       ]
     }
@@ -182,6 +192,7 @@
           <p class="lead">如 USDT/USDC，直接进你自己的钱包。发票写明网络，月底对账不再翻记录。</p>
           <div class="cta" id="book">
             <a class="btn p" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <p class="reassure">只看你的收款流程，不推销</p>
             <p class="nudge">确认收到再付钱</p>
             <a class="textlink" data-cta="FREE_TEMPLATE" data-track="template" href="#book">免费领取稳定币收款模板</a>
           </div>
@@ -379,7 +390,7 @@
             <p class="pack">附<a class="textlink" data-cta="FREE_TEMPLATE" data-track="template" href="#book">免费领取稳定币收款模板</a>：发票、对账表、错链检查清单。</p>
           </article>
           <article class="plan featured">
-            <span class="tag">仅限前 <span data-slots>5</span> 位 · 剩 <span data-slots>5</span> 个</span>
+            <span class="tag"><span>仅限前 <span data-slots>5</span> 位 · 剩 <span data-slots>5</span> 个</span><span>换一条真实评价，满 5 位后恢复 $300</span></span>
             <h3><span>海外华人自由职业者 ·</span><span>稳定币当天收款包</span></h3>
             <p class="price">$150</p>
             <p class="unit"><s>$300</s> 创始价</p>
@@ -393,9 +404,9 @@
                 <li><span>对账表和填写方法</span><b>$100</b></li>
                 <li><span>收入记录导出模板</span><b>$150</b></li>
                 <li><span>首月一次对账检查</span><b>$100</b></li>
-                <li><span>付款前 30 秒核对清单<wbr>（参考价值 $30）</span></li>
+                <li><span>付款前 30 秒核对清单</span><b>$30</b></li>
+                <li class="sum"><span>参考总价值</span><b><s>$780</s></b></li>
               </ul>
-              <p class="was"><span>参考总价值</span> <s>$780</s></p>
               <p class="refnote">以上为单项参考价值，不是过往成交价。</p>
             </details>
             <a class="btn p full" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检</a>
@@ -561,7 +572,7 @@
       </nav>
     </div>
   </footer>
-  <a class="dock" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book" hidden>预约免费体检</a>
+  <a class="dock" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book" hidden>预约 15 分钟免费体检</a>
   <script>
     (function () {
       var src = document.getElementById("slots-left");

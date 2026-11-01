@@ -170,28 +170,27 @@
         <a href="#price">价格</a>
         <a href="#faq">常见问题</a>
       </nav>
-      <a class="btn p sm" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检</a>
+      <a class="btn p sm" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book"><span class="wide">预约 15 分钟免费体检</span><span class="short">预约</span></a>
     </div>
   </header>
+  <p class="locbar">服务地区：香港、台湾、新加坡、日本、北美、欧洲</p>
   <main id="main" tabindex="-1">
     <section class="hero" aria-labelledby="hero-title">
       <div class="w g12">
         <div class="copy">
-          <p class="loc"><i aria-hidden="true"></i>服务地区：香港、台湾、新加坡、日本、北美、欧洲</p>
-          <h1 id="hero-title">今天配好稳定币收款，确认收到第一笔再付钱</h1>
+          <h1 id="hero-title"><span class="l1">今天配好稳定币收款，</span><span class="l2">确认收到第一笔再付钱</span></h1>
           <p class="lead">如 USDT/USDC，直接进你自己的钱包。发票写明网络，月底对账不再翻记录。</p>
-          <p class="dream">从今天起，海外客户付稳定币不用你再教一遍；月底 10 分钟对完账。</p>
           <div class="cta" id="book">
             <a class="btn p" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book">预约 15 分钟免费体检<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
             <p class="nudge">确认收到再付钱</p>
-            <p class="nudge soft">不推销，帮你找出收款最容易丢钱的一步</p>
             <a class="textlink" data-cta="FREE_TEMPLATE" data-track="template" href="#book">免费领取稳定币收款模板</a>
           </div>
         </div>
         <div class="vis" role="group" aria-label="发票与对账表示例">
-          <p class="join">INV-0012 → 已到账</p>
+          <p class="join">INV-0012 → <span id="join-status">待付款</span></p>
+          <p class="tx"><span>示例</span><code>0x4f2a9c…e91b</code></p>
           <div class="card inv">
-            <div class="ih"><b>发票 INV-0012</b><span class="pill">TRC20 · 仅此网络</span></div>
+            <div class="ih"><b>发票 INV-0012</b><span class="pill">TRC20 · 仅此网络</span><span class="st wait" id="inv-status">待付款</span></div>
             <p class="amt">1,200<small>USDT</small></p>
             <p class="for">网站设计（10 月）· 示例</p>
             <div class="pay">
@@ -225,11 +224,11 @@
                   <td class="r">450</td>
                   <td><span class="st ok">已到账</span></td>
                 </tr>
-                <tr class="hl">
+                <tr data-match="inv-0012">
                   <td>10-24</td>
                   <td>INV-0012</td>
                   <td class="r">1,200</td>
-                  <td><span class="st ok">已到账</span></td>
+                  <td><span class="st wait" id="row-status">待付款</span></td>
                 </tr>
                 <tr>
                   <td>10-29</td>
@@ -242,6 +241,13 @@
             <p class="sum"><span>本月已到账</span><b>2,450 USDT</b></p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="tight" aria-labelledby="dream-title">
+      <div class="w">
+        <h2 id="dream-title" class="vh">做到之后</h2>
+        <p class="dream below">从今天起，海外客户付稳定币不用你再教一遍；月底 10 分钟对完账。</p>
       </div>
     </section>
 
@@ -554,7 +560,7 @@
       </nav>
     </div>
   </footer>
-  <a class="dock" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book" hidden>免费体检 · 剩 <span data-slots>5</span> 个名额</a>
+  <a class="dock" data-cta="BOOK_DIAGNOSIS" data-track="book" href="#book" hidden>预约免费体检</a>
   <script>
     (function () {
       var src = document.getElementById("slots-left");
@@ -578,6 +584,35 @@
       if (narrow.addEventListener) {
         narrow.addEventListener("change", function () { sync(true); });
       }
+    })();
+    (function () {
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var pill = document.getElementById("inv-status");
+      var rowPill = document.getElementById("row-status");
+      var row = document.querySelector("[data-match='inv-0012']");
+      var join = document.getElementById("join-status");
+      function paid() {
+        if (pill) { pill.textContent = "已到账"; pill.className = "st ok"; }
+        if (rowPill) { rowPill.textContent = "已到账"; rowPill.className = "st ok"; }
+        if (row) row.classList.add("hl");
+        if (join) join.textContent = "已到账";
+      }
+      if (reduce) paid();
+      else window.setTimeout(paid, 400);
+      var vis = document.querySelector(".vis");
+      var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      if (!vis || reduce || !fine) return;
+      vis.addEventListener("pointermove", function (e) {
+        var r = vis.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5;
+        var y = (e.clientY - r.top) / r.height - 0.5;
+        vis.style.setProperty("--ty", (x * 3).toFixed(2) + "deg");
+        vis.style.setProperty("--tx", (y * -2.5).toFixed(2) + "deg");
+      });
+      vis.addEventListener("pointerleave", function () {
+        vis.style.removeProperty("--ty");
+        vis.style.removeProperty("--tx");
+      });
     })();
   </script>
 </body>

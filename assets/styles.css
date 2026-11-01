@@ -1486,6 +1486,22 @@ footer .reach {
   margin-top: 10px;
 }
 
+.checkin {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  min-height: 44px;
+  margin-top: 0;
+  color: #3b4558;
+  font-size: 14px;
+  font-weight: 500;
+  text-underline-offset: 3px;
+}
+
+.hero .checkin {
+  color: #b7c2d4;
+}
+
 #pains .btn {
   margin-top: var(--s4);
   max-width: 100%;
@@ -2364,4 +2380,158 @@ footer .w.guide {
     height: 46%;
     transform: rotateX(calc(7deg + var(--tx))) rotateY(calc(-9deg + var(--ty))) translateZ(-130px);
   }
+}
+
+.quiz {
+  padding: var(--s8) 0 var(--s12);
+}
+
+.quiz .sheet {
+  max-width: 40rem;
+}
+
+.quiz h1 {
+  font-size: clamp(32px, 8vw, 44px);
+  margin-top: var(--s2);
+}
+
+.quiz .sub {
+  max-width: 28em;
+}
+
+.quiz form {
+  margin-top: var(--s6);
+  display: grid;
+  gap: var(--s3);
+}
+
+.quiz fieldset {
+  margin: 0;
+  padding: var(--s3);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.quiz legend {
+  padding: 0;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.quiz .opts {
+  display: grid;
+  gap: 8px;
+  margin-top: var(--s2);
+}
+
+.quiz .opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.quiz .opt:has(:focus-visible) {
+  outline: 2px solid var(--bg);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px var(--ink);
+}
+
+.quiz .opt:has(:checked) {
+  border-color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+
+.quiz input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  flex: none;
+  accent-color: var(--ink);
+}
+
+.quiz .go {
+  width: 100%;
+  justify-content: center;
+}
+
+.quiz .go:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.quiz .hint {
+  margin: 0;
+  color: var(--mut);
+  font-size: 14px;
+}
+
+.quiz [hidden] {
+  display: none !important;
+}
+
+.quiz .result {
+  margin-top: var(--s4);
+  padding: var(--s4) var(--s3);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.quiz .result h2 {
+  font-size: 32px;
+}
+
+.quiz .acts {
+  display: grid;
+  gap: 8px;
+  margin-top: var(--s3);
+}
+
+.quiz .acts .btn {
+  width: 100%;
+  justify-content: center;
+  white-space: normal;
+  height: auto;
+  min-height: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.quiz .fineprint {
+  margin: 0;
+  color: var(--mut);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.quiz .misses {
+  list-style: none;
+  margin: var(--s3) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--s2);
+}
+
+.quiz .misses li {
+  margin: 0;
+  padding-top: var(--s2);
+  border-top: 1px solid var(--line2);
+}
+
+.quiz .misses b {
+  display: block;
+  font-weight: 600;
+}
+
+.quiz .misses span {
+  display: block;
+  margin-top: 4px;
+  color: var(--ink2);
 }

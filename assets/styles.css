@@ -98,7 +98,6 @@ summary,
 .unit,
 .for,
 .note,
-.addr,
 .sub,
 .lead {
   text-wrap: pretty;
@@ -455,28 +454,27 @@ h1 {
   background: #fff;
 }
 
-.addr {
-  font-size: 12px;
-  color: var(--mut);
-  line-height: 1.6;
+.wallet {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
   min-width: 0;
 }
 
-.addr code {
-  display: block;
-  font: 500 14px/1.5 ui-monospace, "SF Mono", Menlo, monospace;
+.wallet b {
   color: var(--ink);
-  margin: 2px 0 var(--s1);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
-.copyb {
-  display: inline-flex;
+.wallet small {
+  color: var(--mut);
   font-size: 12px;
   font-weight: 600;
-  color: var(--ink);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 2px 8px;
+  letter-spacing: 0.04em;
 }
 
 .note {
@@ -1309,25 +1307,6 @@ header .p:hover { background: #eef0f4; }
   .hero::after { height: 45%; background-size: 44px 44px; }
 }
 
-/* ===== Logo anim A: stable coin ===== */
-header .brand { gap: 8px; perspective: 120px; }
-header .brand::after {
-  content: "$"; flex: none; width: 16px; height: 16px; border-radius: 50%;
-  display: grid; place-items: center;
-  font: 700 10px/1 Inter, system-ui, sans-serif; letter-spacing: 0; color: #e9fff6;
-  background:
-    linear-gradient(115deg, transparent 35%, rgba(255,255,255,.55) 50%, transparent 65%) 0 0 / 300% 100% no-repeat,
-    radial-gradient(circle at 35% 30%, #2bb383, #127a55 70%);
-  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.28), inset 0 -1px 2px rgba(0,0,0,.25), 0 0 10px rgba(18,122,85,.45);
-  animation: ub-coin 4s cubic-bezier(.45,0,.25,1) infinite;
-}
-@keyframes ub-coin {
-  0%, 40% { transform: rotateY(0); background-position: 100% 0, 0 0; }
-  70% { background-position: -50% 0, 0 0; }
-  80%, 100% { transform: rotateY(360deg); background-position: -100% 0, 0 0; }
-}
-@media (prefers-reduced-motion: reduce) { header .brand::after { animation: none; } }
-
 .reach {
   display: flex;
   flex-wrap: wrap;
@@ -1469,8 +1448,45 @@ footer .reach {
   max-width: none;
 }
 
-.hero .dream span {
+.hero .dream span,
+.quiet .dream span {
   white-space: nowrap;
+}
+
+.quiet {
+  padding: 20px 0 4px;
+  color: var(--ink2);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.quiet p {
+  max-width: 40em;
+}
+
+.quiet p + p {
+  margin-top: 8px;
+}
+
+.quiet .locbar {
+  margin: 0 0 8px;
+  color: var(--mut);
+}
+
+.quiet .dream {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.quiet .reassure {
+  margin-top: 8px;
+  color: var(--ink2);
+}
+
+.quiet .okmark {
+  color: var(--ok);
 }
 
 #book.cta {
@@ -1508,7 +1524,7 @@ footer .reach {
   flex-wrap: wrap;
   align-items: center;
   gap: 0 16px;
-  margin-top: 2px;
+  margin-top: 10px;
 }
 
 #book .hero-links .textlink,

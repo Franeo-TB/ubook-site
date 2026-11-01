@@ -20,8 +20,13 @@
   <header>
     <div class="w">
       <a class="brand" href="index.html">UBook</a>
-      <a class="btn p sm" data-cta="BOOK_DIAGNOSIS" data-track="book" href="index.html#book"><span class="wide">预约 15 分钟免费体检</span><span class="short">预约</span></a>
+      <a class="btn p sm" data-cta="BOOK_DIAGNOSIS" data-track="book" href="index.html#book"><span class="wide">预约 15 分钟免费体检</span><span class="short">免费体检</span></a>
     </div>
+    <nav class="mnav" aria-label="页内章节">
+      <a href="index.html#how">流程</a>
+      <a href="index.html#price">价格</a>
+      <a href="index.html#faq">常见问题</a>
+    </nav>
   </header>
   <main class="quiz" id="main" tabindex="-1">
     <div class="w sheet">
@@ -45,7 +50,7 @@
           </div>
         </fieldset>
         <fieldset>
-          <legend>3. 收款钱包的私钥或助记词只有你自己有吗？有没有离线备份？</legend>
+          <legend>3. 助记词只在你手里，而且有离线备份吗？</legend>
           <div class="opts">
             <label class="opt"><input type="radio" name="q3" value="yes" required> 是</label>
             <label class="opt"><input type="radio" name="q3" value="no"> 否</label>
@@ -81,7 +86,7 @@
           </div>
         </fieldset>
         <p class="hint" id="left" aria-live="polite">还有 7 题没答。</p>
-        <button class="btn p go" id="show" type="button" disabled>看结果</button>
+        <button class="btn p go" id="show" type="button">看结果</button>
       </form>
       <section class="result" id="result" hidden aria-live="polite" tabindex="-1">
         <h2 id="band"></h2>
@@ -112,13 +117,13 @@
       var result = document.getElementById("result");
       var names = ["q1", "q2", "q3", "q4", "q5", "q6", "q7"];
       var gaps = {
-        q1: ["发票没写明链", "客户按错网络转账，钱进了另一条链，你在常用钱包里看不到。"],
-        q2: ["付款前不测小额", "第一笔就转全款，转错了要等出问题才知道。"],
-        q3: ["私钥或备份不在自己手里", "别人可能能动这笔钱，或者设备丢了没有离线备份就找不回。"],
-        q4: ["不查收款地址", "地址被冻，或收到来源说不清的钱，往往要过一阵才发现。"],
-        q5: ["到账对不上发票", "不知道是哪个客户、哪张发票，月底只能一笔笔翻。"],
-        q6: ["付款说明每次现写", "措辞每次不一样，客户更容易看错链。"],
-        q7: ["对账超过 10 分钟", "没有固定对法，月底会越对越久。"]
+        q1: ["发票没写明链", "客户按错网络转账，钱进了另一条链，你在常用钱包里看不到。", "在金额下面加一行：网络：TRC20（仅此网络）。"],
+        q2: ["付款前不测小额", "第一笔就转全款，转错了要等出问题才知道。", "先让客户转 1 USDT，你看到到账，再让他付剩下的。"],
+        q3: ["助记词不在自己手里", "别人可能能动这笔钱，或者设备丢了没有离线备份就找不回。", "把助记词抄在纸上，放在只有你能拿到的地方。不要发给别人，也不要存在手机备忘录里。"],
+        q4: ["不查收款地址", "地址被冻，或收到来源说不清的钱，往往要过一阵才发现。", "每个月看一次钱包：地址是否还能收款，有没有对不上的入账。"],
+        q5: ["到账对不上发票", "不知道是哪个客户、哪张发票，月底只能一笔笔翻。", "每张发票用一个不会重复的金额，到账后马上写下客户名和发票号。"],
+        q6: ["付款说明每次现写", "措辞每次不一样，客户更容易看错链。", "写好一份中英文付款说明，以后都发这一份，不要每次重写。"],
+        q7: ["对账超过 10 分钟", "没有固定对法，月底会越对越久。", "每笔到账当天记进表里，月底只核对，不用从头翻。"]
       };
 
       function picked() {
@@ -129,10 +134,14 @@
         return n;
       }
 
+      function clearNeed() {
+        var sets = form.querySelectorAll("fieldset");
+        for (var i = 0; i < sets.length; i++) sets[i].classList.remove("need");
+      }
+
       function refresh() {
         var n = picked();
         var rest = names.length - n;
-        show.disabled = rest !== 0;
         left.textContent = rest === 0 ? "7 题都答了，可以看结果。" : "还有 " + rest + " 题没答。";
       }
 
@@ -161,17 +170,30 @@
         return p;
       }
 
-      form.addEventListener("change", refresh);
+      form.addEventListener("change", function () {
+        clearNeed();
+        refresh();
+      });
       form.addEventListener("submit", function (e) { e.preventDefault(); });
 
       show.addEventListener("click", function () {
-        if (show.disabled) return;
+        var sets = form.querySelectorAll("fieldset");
+        for (var n = 0; n < names.length; n++) {
+          if (!form.querySelector("input[name='" + names[n] + "']:checked")) {
+            clearNeed();
+            sets[n].classList.add("need");
+            left.textContent = "第 " + (n + 1) + " 题还没答";
+            result.hidden = true;
+            sets[n].scrollIntoView({ block: "center", behavior: "instant" });
+            return;
+          }
+        }
+        clearNeed();
         var score = 0;
         var missed = [];
         for (var i = 0; i < names.length; i++) {
           var name = names[i];
           var input = form.querySelector("input[name='" + name + "']:checked");
-          if (!input) return;
           if (scoreOf(name, input.value)) score++;
           else missed.push(gaps[name]);
         }
@@ -193,11 +215,13 @@
           lead.textContent = "7 个里过了 " + score + " 个。有几处还容易出错。约 15 分钟免费体检，当天就能补上。";
           acts.appendChild(link("BOOK_DIAGNOSIS", "预约 15 分钟免费体检", true));
           acts.appendChild(bookNote());
+          acts.appendChild(link("FREE_TEMPLATE", "免费领取稳定币收款模板", false));
         } else {
           band.textContent = "风险高";
           lead.textContent = "7 个里过了 " + score + " 个。建议今天就配好，确认能收到再付钱。";
           acts.appendChild(link("BOOK_DIAGNOSIS", "预约 15 分钟免费体检", true));
           acts.appendChild(bookNote());
+          acts.appendChild(link("FREE_TEMPLATE", "免费领取稳定币收款模板", false));
         }
         missTitle.hidden = !missed.length;
         if (!missed.length) {
@@ -209,10 +233,14 @@
             var li = document.createElement("li");
             var b = document.createElement("b");
             var span = document.createElement("span");
+            var fix = document.createElement("span");
             b.textContent = missed[j][0];
             span.textContent = missed[j][1];
+            fix.className = "fix";
+            fix.textContent = missed[j][2];
             li.appendChild(b);
             li.appendChild(span);
+            li.appendChild(fix);
             list.appendChild(li);
           }
         }

@@ -232,6 +232,10 @@ header .w {
   text-decoration: none;
 }
 
+.mnav {
+  display: none;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -988,7 +992,15 @@ footer .brand {
 }
 
 .fl a {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 10px;
   text-decoration: none;
+}
+
+a[href="https://x.com/Zhoumancang"] {
+  display: inline-block;
+  padding: 12px 0;
 }
 
 #how,
@@ -1468,11 +1480,16 @@ footer .reach {
 }
 
 .reassure {
-  margin: 8px 0 0;
-  color: #b7c2d4;
-  font-size: 13px;
+  margin: 10px 0 0;
+  color: #d5dbe7;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.45;
+}
+
+.reassure .okmark {
+  color: #3dbe86;
+  font-weight: 700;
 }
 
 .nudge {
@@ -1484,6 +1501,23 @@ footer .reach {
 
 #book .textlink {
   margin-top: 10px;
+}
+
+#book .hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 16px;
+  margin-top: 2px;
+}
+
+#book .hero-links .textlink,
+#book .hero-links .checkin {
+  margin-top: 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  min-height: 44px;
 }
 
 .checkin {
@@ -2127,14 +2161,51 @@ main > section:not(.hero):not(.how) {
 @media (max-width: 959px) {
   .btn .wide { display: none; }
   .btn .short { display: inline; }
+  header .btn.sm {
+    height: 44px;
+    min-height: 44px;
+    padding: 0 14px;
+  }
+  header .w {
+    height: 52px;
+  }
+  .mnav {
+    display: flex;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .mnav a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 8px;
+    color: #c9d0de;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
   .hero {
+    padding-top: 24px;
     padding-bottom: 12px;
   }
-  .vis {
+  .locbar {
+    margin-bottom: 10px;
+  }
+  .hero .lead {
     margin-top: 8px;
-    transform: scale(0.92);
+  }
+  .hero .dream {
+    margin-top: 6px;
+  }
+  .hero .cta {
+    margin-top: 12px;
+  }
+  .vis {
+    margin-top: 12px;
+    transform: scale(0.69);
     transform-origin: top center;
-    margin-bottom: -28px;
+    margin-bottom: -180px;
   }
   footer .w.guide {
     margin-bottom: 28px;
@@ -2348,11 +2419,6 @@ footer .w.guide {
 
 @media (max-width: 959px) {
   body.has-dock { padding-bottom: 84px; }
-  .hero { padding-top: 20px; }
-  .vis {
-    transform: scale(0.8);
-    margin-bottom: -64px;
-  }
   .join { margin: -14px 18px 12px auto; }
   .vis .rec { margin-top: 8px; }
   .hero {
@@ -2511,9 +2577,20 @@ footer .w.guide {
 
 .quiz .fineprint {
   margin: 0;
-  color: var(--mut);
-  font-size: 13px;
+  color: var(--ink2);
+  font-size: 14px;
   line-height: 1.5;
+}
+
+.quiz fieldset.need {
+  outline: 2px solid #b4432b;
+  outline-offset: 2px;
+}
+
+.quiz .misses .fix {
+  display: block;
+  margin-top: 4px;
+  color: var(--ink);
 }
 
 .quiz .misses {

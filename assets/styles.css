@@ -2418,6 +2418,15 @@ footer .w.guide {
 }
 
 @media (max-width: 959px) {
+  html { scroll-padding-top: 106px; }
+  #how,
+  #price,
+  #faq,
+  #main,
+  #book,
+  .quiz fieldset {
+    scroll-margin-top: 106px;
+  }
   body.has-dock { padding-bottom: 84px; }
   .join { margin: -14px 18px 12px auto; }
   .vis .rec { margin-top: 8px; }
@@ -2582,15 +2591,32 @@ footer .w.guide {
   line-height: 1.5;
 }
 
+.quiz .acts .fineprint + .btn {
+  margin-top: 8px;
+}
+
 .quiz fieldset.need {
-  outline: 2px solid #b4432b;
-  outline-offset: 2px;
+  border: 2px solid #b4432b;
+  outline: none;
+}
+
+.quiz .needmsg:not(:empty) {
+  margin: 12px 0 0;
+  color: #b4432b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
 }
 
 .quiz .misses .fix {
   display: block;
-  margin-top: 4px;
+  margin-top: 10px;
   color: var(--ink);
+}
+
+.quiz .misses .fix b {
+  display: inline;
+  font-weight: 700;
 }
 
 .quiz .misses {

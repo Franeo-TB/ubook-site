@@ -134,9 +134,21 @@
         return n;
       }
 
+      var sets = form.querySelectorAll("fieldset");
+      var msgs = [];
+      for (var m = 0; m < sets.length; m++) {
+        var note = document.createElement("p");
+        note.className = "needmsg";
+        note.setAttribute("aria-live", "polite");
+        sets[m].appendChild(note);
+        msgs.push(note);
+      }
+
       function clearNeed() {
-        var sets = form.querySelectorAll("fieldset");
-        for (var i = 0; i < sets.length; i++) sets[i].classList.remove("need");
+        for (var i = 0; i < sets.length; i++) {
+          sets[i].classList.remove("need");
+          msgs[i].textContent = "";
+        }
       }
 
       function refresh() {
@@ -177,12 +189,11 @@
       form.addEventListener("submit", function (e) { e.preventDefault(); });
 
       show.addEventListener("click", function () {
-        var sets = form.querySelectorAll("fieldset");
         for (var n = 0; n < names.length; n++) {
           if (!form.querySelector("input[name='" + names[n] + "']:checked")) {
             clearNeed();
             sets[n].classList.add("need");
-            left.textContent = "第 " + (n + 1) + " 题还没答";
+            msgs[n].textContent = "第 " + (n + 1) + " 题还没答";
             result.hidden = true;
             sets[n].scrollIntoView({ block: "center", behavior: "instant" });
             return;
@@ -208,8 +219,8 @@
           band.textContent = "很稳";
           lead.textContent = "7 个里过了 " + score + " 个。收款该有的步骤大体齐了，模板可以先拿去用。";
           acts.appendChild(link("FREE_TEMPLATE", "免费领取稳定币收款模板", true));
-          acts.appendChild(link("BOOK_DIAGNOSIS", "预约 15 分钟免费体检", false));
           acts.appendChild(bookNote());
+          acts.appendChild(link("BOOK_DIAGNOSIS", "预约 15 分钟免费体检", false));
         } else if (score >= 3) {
           band.textContent = "有漏洞";
           lead.textContent = "7 个里过了 " + score + " 个。有几处还容易出错。约 15 分钟免费体检，当天就能补上。";
@@ -237,7 +248,10 @@
             b.textContent = missed[j][0];
             span.textContent = missed[j][1];
             fix.className = "fix";
-            fix.textContent = missed[j][2];
+            var mark = document.createElement("b");
+            mark.textContent = "改法：";
+            fix.appendChild(mark);
+            fix.appendChild(document.createTextNode(missed[j][2]));
             li.appendChild(b);
             li.appendChild(span);
             li.appendChild(fix);

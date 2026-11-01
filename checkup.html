@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 分钟稳定币收款体检表｜UBook</title>
+  <meta name="description" content="7 个问题，看你的收款有没有漏洞。只在这页算分，不收集私钥、助记词或钱包地址。">
+  <link rel="canonical" href="https://ubookpay.com/checkup">
+  <meta name="theme-color" content="#FAFAF8">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/cta.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+  <header>
+    <div class="w">
+      <a class="brand" href="index.html">UBook</a>
+      <a class="btn p sm" data-cta="BOOK_DIAGNOSIS" data-track="book" href="index.html#book"><span class="wide">预约 15 分钟免费体检</span><span class="short">预约</span></a>
+    </div>
+  </header>
+  <main class="quiz" id="main" tabindex="-1">
+    <div class="w sheet">
+      <p class="ey">收款体检</p>
+      <h1>2 分钟稳定币收款体检表</h1>
+      <p class="sub">7 个问题，看你的收款有没有漏洞。</p>
+      <p class="hint">只在这页算分，不上传。不问私钥、助记词，也不问钱包地址。</p>
+      <form id="check" novalidate>
+        <fieldset>
+          <legend>1. 你的发票上有没有写明收款用哪条链（比如 TRC20 或 ERC20）？</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="q1" value="yes" required> 是</label>
+            <label class="opt"><input type="radio" name="q1" value="no"> 否</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>2. 客户付款前，你会不会先让他转一笔小额测试？</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="q2" value="yes" required> 是</label>
+            <label class="opt"><input type="radio" name="q2" value="no"> 否</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>3. 收款钱包的私钥或助记词只有你自己有吗？有没有离线备份？</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="q3" value="yes" required> 是</label>
+            <label class="opt"><input type="radio" name="q3" value="no"> 否</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>4. 你会不会定期查收款地址有没有被冻结、有没有收到可疑来源的钱？</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="q4" value="yes" required> 是</label>
+            <label class="opt"><input type="radio" name="q4" value="no"> 否</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>5. 每一笔到账，你能在 10 秒内对上是哪个客户、哪张发票吗？</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="q5" value="yes" required> 是</label>
+            <label class="opt"><input type="radio" name="q5" value="no"> 否</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>6. 你的中英文付款说明是固定模板，还是每次都现写？</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="q6" value="template" required> 固定模板</label>
+            <label class="opt"><input type="radio" name="q6" value="fresh"> 每次现写</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>7. 月底对账要花多久？</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="q7" value="10" required> 10 分钟以内</label>
+            <label class="opt"><input type="radio" name="q7" value="60"> 1 小时以内</label>
+            <label class="opt"><input type="radio" name="q7" value="more"> 超过 1 小时</label>
+          </div>
+        </fieldset>
+        <p class="hint" id="left" aria-live="polite">还有 7 题没答。</p>
+        <button class="btn p go" id="show" type="button" disabled>看结果</button>
+      </form>
+      <section class="result" id="result" hidden aria-live="polite" tabindex="-1">
+        <h2 id="band"></h2>
+        <p id="lead"></p>
+        <div class="acts" id="acts"></div>
+        <h3 id="miss-title">没过的题</h3>
+        <ul class="misses" id="misses"></ul>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="w">
+      <a class="brand" href="index.html">UBook</a>
+      <p class="fine">不代收资金、不换汇、不碰私钥、不提供税务建议。</p>
+      <p class="fine">服务地区：香港、台湾、新加坡、日本、北美、欧洲。</p>
+      <div class="fl">
+        <a href="index.html">返回首页</a>
+        <a href="privacy.html">隐私</a>
+        <span>© 2026 UBook</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var form = document.getElementById("check");
+      var show = document.getElementById("show");
+      var left = document.getElementById("left");
+      var result = document.getElementById("result");
+      var names = ["q1", "q2", "q3", "q4", "q5", "q6", "q7"];
+      var gaps = {
+        q1: ["发票没写明链", "客户按错网络转账，钱进了另一条链，你在常用钱包里看不到。"],
+        q2: ["付款前不测小额", "第一笔就转全款，转错了要等出问题才知道。"],
+        q3: ["私钥或备份不在自己手里", "别人可能能动这笔钱，或者设备丢了没有离线备份就找不回。"],
+        q4: ["不查收款地址", "地址被冻，或收到来源说不清的钱，往往要过一阵才发现。"],
+        q5: ["到账对不上发票", "不知道是哪个客户、哪张发票，月底只能一笔笔翻。"],
+        q6: ["付款说明每次现写", "措辞每次不一样，客户更容易看错链。"],
+        q7: ["对账超过 10 分钟", "没有固定对法，月底会越对越久。"]
+      };
+
+      function picked() {
+        var n = 0;
+        for (var i = 0; i < names.length; i++) {
+          if (form.querySelector("input[name='" + names[i] + "']:checked")) n++;
+        }
+        return n;
+      }
+
+      function refresh() {
+        var n = picked();
+        var rest = names.length - n;
+        show.disabled = rest !== 0;
+        left.textContent = rest === 0 ? "7 题都答了，可以看结果。" : "还有 " + rest + " 题没答。";
+      }
+
+      function scoreOf(name, value) {
+        if (name === "q6") return value === "template";
+        if (name === "q7") return value === "10";
+        return value === "yes";
+      }
+
+      function link(cta, label, primary) {
+        var a = document.createElement("a");
+        a.className = primary ? "btn p" : "btn s";
+        a.setAttribute("data-cta", cta);
+        a.setAttribute("data-track", cta === "FREE_TEMPLATE" ? "template" : "book");
+        a.href = cta === "FREE_TEMPLATE" ? "https://tally.so/r/1WWQzO" : "https://calendly.com/leofrank1017/ubook-15";
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = label;
+        return a;
+      }
+
+      function bookNote() {
+        var p = document.createElement("p");
+        p.className = "fineprint";
+        p.textContent = "只看你的收款流程，不推销。";
+        return p;
+      }
+
+      form.addEventListener("change", refresh);
+      form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+      show.addEventListener("click", function () {
+        if (show.disabled) return;
+        var score = 0;
+        var missed = [];
+        for (var i = 0; i < names.length; i++) {
+          var name = names[i];
+          var input = form.querySelector("input[name='" + name + "']:checked");
+          if (!input) return;
+          if (scoreOf(name, input.value)) score++;
+          else missed.push(gaps[name]);
+        }
+        var band = document.getElementById("band");
+        var lead = document.getElementById("lead");
+        var acts = document.getElementById("acts");
+        var list = document.getElementById("misses");
+        var missTitle = document.getElementById("miss-title");
+        acts.replaceChildren();
+        list.replaceChildren();
+        if (score >= 6) {
+          band.textContent = "很稳";
+          lead.textContent = "7 个里过了 " + score + " 个。收款该有的步骤大体齐了，模板可以先拿去用。";
+          acts.appendChild(link("FREE_TEMPLATE", "免费领取稳定币收款模板", true));
+          acts.appendChild(link("BOOK_DIAGNOSIS", "预约 15 分钟免费体检", false));
+          acts.appendChild(bookNote());
+        } else if (score >= 3) {
+          band.textContent = "有漏洞";
+          lead.textContent = "7 个里过了 " + score + " 个。有几处还容易出错。约 15 分钟免费体检，当天就能补上。";
+          acts.appendChild(link("BOOK_DIAGNOSIS", "预约 15 分钟免费体检", true));
+          acts.appendChild(bookNote());
+        } else {
+          band.textContent = "风险高";
+          lead.textContent = "7 个里过了 " + score + " 个。建议今天就配好，确认能收到再付钱。";
+          acts.appendChild(link("BOOK_DIAGNOSIS", "预约 15 分钟免费体检", true));
+          acts.appendChild(bookNote());
+        }
+        missTitle.hidden = !missed.length;
+        if (!missed.length) {
+          var none = document.createElement("li");
+          none.textContent = "这 7 项都过了。";
+          list.appendChild(none);
+        } else {
+          for (var j = 0; j < missed.length; j++) {
+            var li = document.createElement("li");
+            var b = document.createElement("b");
+            var span = document.createElement("span");
+            b.textContent = missed[j][0];
+            span.textContent = missed[j][1];
+            li.appendChild(b);
+            li.appendChild(span);
+            list.appendChild(li);
+          }
+        }
+        result.hidden = false;
+        if (window.UBOOK_CTA) {
+          var nodes = acts.querySelectorAll("[data-cta]");
+          for (var k = 0; k < nodes.length; k++) {
+            var key = nodes[k].getAttribute("data-cta");
+            if (window.UBOOK_CTA[key]) nodes[k].href = window.UBOOK_CTA[key];
+          }
+        }
+        result.focus();
+      });
+
+      refresh();
+    })();
+  </script>
+</body>
+</html>
